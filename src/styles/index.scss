@@ -1,0 +1,22 @@
+@import "./settings";
+//*Components
+@import "./components/card";
+@import "./components/paintCard";
+@import "./components/formEmail";
+@import "./components/navigation";
+@import "./components/paintRandom";
+@import "./components/uniqueCard";
+@import "./components/formLogin";
+@import "./components/formSignUp";
+//*Pages
+@import "./pages/profil";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/discover";
+@import "./pages/home";
+@import "./pages/login";
+@import "./pages/random";
+@import "./pages/singlePaint";
+@import "./pages/welcome";
+
+
