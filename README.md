@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+![Logo](https://zupimages.net/up/23/07/iane.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Membres : Hugo Puillet, Alexandre Hontcharouk, Kyle Elore
 
-In the project directory, you can run:
+# Description du projet
 
-### `npm start`
+Bienvenue sur notre site Web qui utilise l'API du Metropolitan Museum of Art. Nous fournissons une variété de fonctionnalités pour vous aider à naviguer à travers des collections d'art et à explorer la riche histoire et le patrimoine culturel du Metropolitan Museum. Avec l'API du Metropolitan Museum, vous pouvez afficher des informations détaillées sur des œuvres spécifiques, ainsi que des informations complètes sur des collections et des expositions. Nous sommes fiers de vous offrir une expérience interactive riche et informée de l'art et de la culture du Metropolitan Museum, n'hésitez donc pas à nous visiter pour découvrir ce que nous avons à offrir.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Fonctionnalités
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Bienvenue sur notre site web qui vous offre l'opportunité d'explorer le riche patrimoine culturel du Metropolitan Museum of Art. Pour accéder à notre site web, vous devez vous inscrire et créer un compte. Une fois inscrit, vous aurez accès à un système d'onglet de navigation.
 
-### `npm test`
+Vous pouvez consulter des informations détaillées sur les œuvres d'art, les artistes et les mouvements.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Nous sommes fiers de vous offrir une expérience interactive riche et informée de l'art et de la culture du Metropolitan Museum. Nous espérons que vous apprécierez votre visite et que vous trouverez le site Web utile. N'hésitez pas à nous contacter si vous avez des questions ou des commentaires.
 
-### `npm run build`
+## Expérience artistique immersive 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#A quoi va ressembler le site
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Le site utilisera l'API du Musée de chicago
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##Etoffer un peu en parlant du login et d'autres fonctionnalitées 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Les différente pages présentes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#PRESENTATION A PAR FAIRE !!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Une page Home static (en mode non connecté)
+Qui permettra de mettre ce que le site propose.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Page de connexion / inscription  (avec les boutons se connecter avec facebook/google)
 
-## Learn More
+- Une page Accueil (Pourra y accéder lorsqu'on est connecté)
+Il y aura différents filtres pour afficher des peintures
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Recherche : Avec une barre de recherche et des filtres par genre, artiste etc
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+OPTION : 
+- Une page Chat en direct pour discuter art
 
-### Code Splitting
+## Les components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ - A SUIVRE
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Pour le style css / sass sera fait à la main
