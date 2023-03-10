@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+.discover{
+    position: absolute;
+    padding:0;
+    margin:0;
+    background-color: #AB6EA5;
+    // background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.what{
+    font-family: 'Italiana', serif;
+    font-size: 5rem;
+    padding-top: 110px;
+    padding-right: 80px;
+    float: right;
+    width: 50%;
+    text-transform: uppercase;
+    color: black;
+}
+
+.why{
+    font-family: 'Italiana', serif;
+    font-size: 5rem;
+    padding-top: 30px;
+    padding-left: 80px;
+
+    clear: left;
+
+    width: 50%;
+    text-transform: uppercase;
+    color: black;
+}
+
+.descri{
+    font-size: 1.3rem;
+    padding-top: 20px;
+    padding-right: 80px;
+    clear: right;
+    float: right;
+    width: 50%;
+    color: black;
+
+}
+
+.sub{
+    text-decoration: dotted;
+    font-size: 1.3rem;
+    padding-top: 40px;
+    padding-left: 80px;
+    clear: left;
+    float: left;
+    width: 50%;
+    color: black;
+
+}
+
+.la-passion{
+    padding: 190px 0 50px 80px;
+    float: left;
+    width: 45%;
+}
+
+.dali{
+    padding-top: 75px;
+    padding-bottom: 25px;
+    padding-right: 80px;
+    clear: right;
+    float: right;
+    width: 40%;
+}
+
