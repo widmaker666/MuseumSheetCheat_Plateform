@@ -28,7 +28,7 @@ Le site utilisera l'API du Musée de chicago ainsi que Firebase, EmailJs, Framer
 Pour parler de nous
 
 -Une page Contact
-Enovoyer un message pour un besoin, une attente ou un remerciement
+Envoyer un message pour un besoin, une attente ou un remerciement
 
 -Une page Discover
 page de présentation du site et de l'Api
