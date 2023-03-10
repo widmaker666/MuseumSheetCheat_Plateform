@@ -41,10 +41,10 @@ function Home() {
 
   return (
     <div>
-    <div className="container">
+    
     <Navbar/>    
-    </div> 
-    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /> 
+    
         
       <div className="mainContainer mb-5">
         <h1>Home</h1>
