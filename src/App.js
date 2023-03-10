@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "../src/context/AuthProvider";
-import Navigation from "./components/Navigation";
+import Navbar from "./components/Navbar";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Discover from "./pages/Discover";
@@ -17,7 +18,7 @@ function App() {
     <AuthProvider>
       <div className="app">
         <BrowserRouter>  
-        <Navigation/>      
+        <Navbar/>      
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/discover" element={<Discover />} />            
