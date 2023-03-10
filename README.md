@@ -19,30 +19,64 @@ Nous sommes fiers de vous offrir une expérience interactive riche et informée 
 
 #A quoi va ressembler le site
 
-Le site utilisera l'API du Musée de chicago
-
-##Etoffer un peu en parlant du login et d'autres fonctionnalitées 
+Le site utilisera l'API du Musée de chicago ainsi que Firebase, EmailJs, FramerMotion
 
 
 ## Les différente pages présentes
 
-#PRESENTATION A PAR FAIRE !!
+-Une page About
+Pour parler de nous
 
-- Une page Home static (en mode non connecté)
+-Une page Contact
+Enovoyer un message pour un besoin, une attente ou un remerciement
+
+-Une page Discover
+page de présentation du site et de l'Api
+
+-Une page profil
+si connecté vous affiche toutes les données liées à votre inscription
+
+-Une page random
+Qui vous affiche une peinture aléatoire au clic
+
+- Une page Welcome (en mode non connecté)
 Qui permettra de mettre ce que le site propose.
 
 - Page de connexion / inscription  (avec les boutons se connecter avec facebook/google)
 
-- Une page Accueil (Pourra y accéder lorsqu'on est connecté)
+- Une page Home (Pourra y accéder lorsqu'on est connecté)
 Il y aura différents filtres pour afficher des peintures
 
-- Recherche : Avec une barre de recherche et des filtres par genre, artiste etc
 
-OPTION : 
-- Une page Chat en direct pour discuter art
 
 ## Les components
 
- - A SUIVRE
+-Card
+qui fait la présentation d'une carte
+
+-FormEmail
+pour la page contact qui servira pour toute demande
+
+-FormLogin
+qui servira pour la connexion une fois inscrit
+
+-FormSignUp
+qui servira pour l'inscription
+
+-Logo
+le logo du MSC
+
+-Navigation
+Navbar dynamique
+
+-PaintCard
+.map de l'api qui permet d'aller chercher les données;
+
+-PaintRandom
+qui permet la selection d'une oeuvre au hasard
+
+
+
+
 
 ##Pour le style css / sass sera fait à la main
