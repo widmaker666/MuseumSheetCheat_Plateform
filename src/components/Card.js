@@ -4,6 +4,7 @@ import Alien from "../assets/images/alien.png"
 
 
 const Card = ({ paint }) => {
+  
   //-Permet de récupérer l'id de la div cliqué ! Manque plus qu'à s'en servir pour faire afficher la peinture
 const navigate = useNavigate()
 
@@ -15,8 +16,7 @@ const navigate = useNavigate()
     console.log(urlPaint);
   };
 
-  return (
-  
+  return ( 
 
     <li className="card" onClick={handleClick} target="_blank">       
       <img

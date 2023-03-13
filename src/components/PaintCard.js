@@ -2,11 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
+
 const PaintCard = () => {
   const [paintData, setPaintData] = useState([]);
   const [rangeValue, setRangeValue] = useState(24);
-
- 
 
   //-Nouvelle API Chicago museum plus simple je pense à tester
   const API = "https://api.artic.edu/api/v1/artworks?limit=100";
@@ -39,13 +38,11 @@ const PaintCard = () => {
             )
             .sort((a, b) => a.id - b.id)
             .slice(0, rangeValue)
-            .map((paint, index) => <Card key={index} paint={paint} />)}
-      </ul>
+            .map((paint, index) => <Card key={index} paint={paint} />)              
+            }
+      </ul>      
     </div>
   );
 };
 
 export default PaintCard;
-
-/* paintData.artist_title === null ? 
-"unsigned" : paintData.artist_title */
