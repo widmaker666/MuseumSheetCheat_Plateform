@@ -1,5 +1,4 @@
 import React from "react";
-
 import { NavLink } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import matisse from "../assets/images/matisse.jpg";
@@ -20,7 +19,7 @@ const Welcome = () => {
             <img
               className="img_matisse"
               src={matisse}
-              alt="image peinture matisse"
+              alt="image_peinture_matisse"
             />
           </NavLink>
         </div>
@@ -30,7 +29,7 @@ const Welcome = () => {
             <img
               className="img_fenetre"
               src={fenetre}
-              alt="image peinture matisse"
+              alt="image_peinture_matisse"
             />
           </NavLink>
         </div>
@@ -38,9 +37,14 @@ const Welcome = () => {
       <img
         className="img_harley"
         src={ambush}
-        alt="image harley weir"
+        alt="image_harley_weir"
       />
-  );
-};
+      </div>
+  )
+}
+      
+      
+     
+    
 
 export default Welcome;
