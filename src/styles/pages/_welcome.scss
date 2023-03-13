@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+.welcome{
+    position:absolute;
+    padding:0;
+    margin:0;
+    background-color: #65B6B6;
+    // background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.h1_welcome{
+    font-family: 'Italiana', serif;
+    font-size: 4rem;
+    padding-top: 150px;
+    padding-left: 50px;
+    float: left;
+    width: 50%;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+}
+
+.img_harley{
+    display: flex;
+    justify-content: end;
+    // float: right;
+    width: 400px;
+    height: 85%;
+    margin: 90px 180px auto auto
+}
+
+.to_discover{
+    color: aliceblue;
+    font-family: 'Italiana', serif;
+    font-size: 2rem;
+    clear: left;
+    width: 15%;
+    float: left;
+    margin: 30px auto auto 150px;
+
+}
+
+.img_fenetre{
+    width: 219px;
+    height: 231px;
+}
+// .click-discover{
+//     color: aliceblue;
+//     font-family: 'Italiana', serif;
+//     font-size: 2rem;
+//     clear: left;
+//     // width: 15%;
+//     float: left;
+//     margin: 50px auto auto 150px;
+
+// }
+
+.to_start{
+    color: aliceblue;
+    font-family: 'Italiana', serif;
+    font-size: 2rem;
+    color: aliceblue;
+    width: 15%;
+    float: left;
+    margin: 30px auto auto 150px;
+}
+
+// .click-start{
+//     width: 100%;
+// }
+// .click-discover{
+//     width: 100%;
+// }
+
+.img_matisse:hover{
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+.img_fenetre:hover{
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    top: 0;
+}
+
+
+@media screen and (max-width: 1550px) {
+    .h1_welcome{
+        font-family: 'Italiana', serif;
+        font-size: 3rem;
+        padding-top: 150px;
+        padding-left: 50px;
+        float: left;
+        width: 50%;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .to_discover{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 1.5rem;
+        clear: left;
+        width: 15%;
+        float: left;
+        margin: 50px auto auto 50px;
+    }
+    .to_start{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 1.5rem;
+        color: aliceblue;
+        width: 15%;
+        float: left;
+        margin: 50px auto auto 150px;
+    }
+    .img_harley{
+        display: flex;
+        justify-content: end;
+        // float: right;
+        width: 400px;
+        height: 85%;
+        margin: 90px 50px auto auto
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    h3{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .h1_welcome{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .h1_welcome{
+        font-family: 'Italiana', serif;
+        font-size: 3rem;
+        padding-top: 150px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    .img_harley{
+        display: none;
+    }
+
+    .bouttons-welcome{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .to_discover{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 1.5rem;
+        clear: left;
+        width: 40%;
+        float: left;
+        margin: 50px auto auto 50px;
+    }
+    .to_start{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 1.5rem;
+        color: aliceblue;
+        width: 200px;
+        // width: 40%;
+        float: right;
+        margin: 50px 50px auto auto;
+    }
+    .click-discover{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 2rem;
+        clear: left;
+        width: 200px;
+        // width: 40%;
+        float: left;
+        // margin: 50px auto auto 50px;
+    }
+    .click-start{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 2rem;
+        color: aliceblue;
+        clear: right;
+        // width: 40%;
+        float: right;
+        // margin: 50px auto auto 150px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    }
+
+@media screen and (max-width: 600px) {
+    .h1_welcome{
+        font-family: 'Italiana', serif;
+        font-size: 2.5rem;
+        padding-top: 150px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img_fenetre{
+        width: 150px;
+        height: 158px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img_matisse{
+        width: 150px;
+    }
+    .click-discover{
+        width: 150px;
+        float: left;
+        clear: right;
+    }
+    .click-start{
+        width: 150px;
+        float: left;
+        // margin-right: -50px;
+        clear: right;
+        font-size: 1.5rem;
+    }
+    .to_start{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 1.5rem;
+        color: aliceblue;
+        clear: right;
+        // width: 40%;
+
+        margin-right: 100px;
+        // margin: 50px auto auto 150px;
+    }
+
+        .to_discover{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 1rem;
+        clear: left;
+        width: 40%;
+        float: left;
+        // margin: 50px auto auto 50px;
+    }
+    .click-discover{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 1.5rem;
+        clear: left;
+
+        // width: 40%;
+        float: left;
+        // margin: 50px auto auto 50px;
+    }
+    .to_start{
+        color: aliceblue;
+        font-family: 'Italiana', serif;
+        font-size: 1rem;
+        color: aliceblue;
+        width: 100px;
+        // width: 40%;
+        float: right;
+        margin: 50px 150px auto auto;
+    }
+
+
+}
+
