@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import { auth, db } from "../config/firebase-congif";
 import { signOut } from "firebase/auth";
 import { AuthContext } from "../context/AuthProvider";
-
 import { useNavigate } from "react-router-dom";
 import { ref, onValue } from "firebase/database";
 import PaintCard from "../components/PaintCard";
@@ -20,7 +19,7 @@ function Home() {
       const starCountRef = ref(db, "users/" + currentUser.uid);
       onValue(starCountRef, (snapshot) => {
         if (snapshot.exists()) {
-          let data = snapshot.val();
+          const data = snapshot.val();
           setUsername(data.firstName + " " + data.lastName);
         }
       });
@@ -43,12 +42,11 @@ function Home() {
     <div>
     
     <Navbar/>    
-    <br /><br /><br /><br /><br /><br /><br /><br /> 
-    
+    <br /><br /><br /><br /><br /><br /><br /><br />    
         
       <div className="mainContainer mb-5">
         <h1>Home</h1>
-        {currentUser && <p>Welcome, {username}</p>}
+        {currentUser && <p>Connected</p>}
         <div className="buttons">
           <button onClick={clickLogin}>
             {currentUser ? "Log Out" : "Login"}
