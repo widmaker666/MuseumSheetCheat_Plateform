@@ -4,6 +4,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase-congif";
 
+import Navigation from "../components/Navigation";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,13 +17,14 @@ const Login = () => {
       signInWithEmailAndPassword(auth, email, password).catch((error) =>
         console.log(error)
       );
-      navigate("/");
+      navigate("/home");
     }
     onRegister();
   };
 
   return (
     <div>
+    
       <form className="loginForm" onSubmit={handleSubmit}>
         <input
           placeholder="email"

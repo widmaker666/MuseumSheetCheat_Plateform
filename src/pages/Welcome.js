@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NavLink } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import matisse from "../assets/images/matisse.jpg";
@@ -39,7 +40,6 @@ const Welcome = () => {
         src={ambush}
         alt="image harley weir"
       />
-    </div>
   );
 };
 

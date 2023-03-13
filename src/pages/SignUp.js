@@ -5,6 +5,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { ref, set } from "firebase/database";
 
+import Navigation from "../components/Navigation";
+
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -24,13 +26,14 @@ const SignUp = () => {
           });
         })
         .catch((error) => console.log(error));
-      navigate("/");
+      navigate("/home");
     }
     onRegister();
   };
 
   return (
     <div>
+  
       <form className="signupForm" onSubmit={handleSubmit}>
         <input
           placeholder="first name"

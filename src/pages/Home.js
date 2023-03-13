@@ -6,18 +6,21 @@ import { AuthContext } from "../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { ref, onValue } from "firebase/database";
 import PaintCard from "../components/PaintCard";
+import Navbar from "../components/Navbar";
+
 
 
 function Home() {
   const { currentUser } = useContext(AuthContext);
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("");  
   const navigate = useNavigate();
+  console.log(username);
   useEffect(() => {
     if (currentUser) {
       const starCountRef = ref(db, "users/" + currentUser.uid);
       onValue(starCountRef, (snapshot) => {
         if (snapshot.exists()) {
-          var data = snapshot.val();
+          let data = snapshot.val();
           setUsername(data.firstName + " " + data.lastName);
         }
       });
@@ -38,19 +41,23 @@ function Home() {
 
   return (
     <div>
+    
+    <Navbar/>    
+    <br /><br /><br /><br /><br /><br /><br /><br /> 
+    
+        
+      <div className="mainContainer mb-5">
+        <h1>Home</h1>
+        {currentUser && <p>Welcome, {username}</p>}
+        <div className="buttons">
+          <button onClick={clickLogin}>
+            {currentUser ? "Log Out" : "Login"}
+          </button>
+          {!currentUser && <button onClick={clickSignup}>Sign Up</button>}
+        </div>
 
-    <div className="mainContainer">
-      <h1>Home</h1>
-      {currentUser && <p>Welcome, {username}</p>}
-      <div className="buttons">
-        <button onClick={clickLogin}>
-          {currentUser ? "Log Out" : "Login"}
-        </button>
-        {!currentUser && <button onClick={clickSignup}>Sign Up</button>}
+        <PaintCard />
       </div>
-
-    <PaintCard/>
-    </div>
     </div>
   );
 }
