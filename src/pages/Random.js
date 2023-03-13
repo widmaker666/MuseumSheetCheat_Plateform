@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import PaintCardRandom from "../components/PaintCardRandom";
 
 
-import PaintRandom from "../components/PaintRandom";
+
 
 const Random = () => {
   return (
@@ -10,7 +11,7 @@ const Random = () => {
     <Navbar/>
     <br /><br /><br /><br /><br />
       <h1>Random</h1>
-      <PaintRandom />
+      <PaintCardRandom />
     </div>
   );
 };
