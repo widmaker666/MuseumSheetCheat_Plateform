@@ -25,7 +25,8 @@ function App() {
             <Route exact path="/about" element={<About />} />                        
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/signup" element={<SignUp />} />            
-            <Route exact path="/one-paint" element={<SinglePaint />} />            
+            <Route exact path="/one-paint" element={<SinglePaint />} /> 
+            <Route path="*" element={<Welcome />} />           
           </Routes>
         </BrowserRouter>
       </div>
