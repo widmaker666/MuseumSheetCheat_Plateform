@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 
+
 const PaintCardRandom = () => {
   const [paintData, setPaintData] = useState([]);
   const [description, setDescription] = useState({});
@@ -34,8 +35,8 @@ const PaintCardRandom = () => {
     <div className="paints">
       <img
         src={
-          paintData.image_id === undefined
-            ? "LOADING"
+          paintData.image_id === undefined || paintData.image_id === null
+            ? ""
             : `https://www.artic.edu/iiif/2/${paintData.image_id}/full/843,/0/default.jpg`
         }
         width="500px"
