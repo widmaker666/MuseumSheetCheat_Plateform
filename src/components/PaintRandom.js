@@ -24,7 +24,7 @@ const PaintRandom = () => {
       .get(apiDescription)
       .then((res) => res.data)
       .then((data) => setDescription(data.description[0]));
-  }, [paintData]);
+  }, []);
 
   return (
     <div className="paints">
