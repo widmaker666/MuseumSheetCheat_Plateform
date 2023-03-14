@@ -4,6 +4,7 @@ import { AuthProvider } from "../src/context/AuthProvider";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Discover from "./pages/Discover";
+import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Random from "./pages/Random";
@@ -25,8 +26,8 @@ function App() {
             <Route exact path="/about" element={<About />} />                        
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/signup" element={<SignUp />} />            
-            <Route exact path="/one-paint" element={<SinglePaint />} /> 
-            <Route path="*" element={<Welcome />} />           
+            <Route exact path="/one-paint/:uid" element={<SinglePaint />} />            
+            <Route path="*" element={<Error404 />} />           
           </Routes>
         </BrowserRouter>
       </div>

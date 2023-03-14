@@ -36,7 +36,7 @@ const PaintCard = () => {
                 paint.image_id !== null &&
                 paint.place_of_origin !== null
             )
-            .sort((a, b) => a.id - b.id)
+            .sort((a, b) => b.id - a.id)
             .slice(0, rangeValue)
             .map((paint, index) => <Card key={index} paint={paint} />)              
             }
