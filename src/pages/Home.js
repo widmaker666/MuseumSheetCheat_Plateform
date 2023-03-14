@@ -44,8 +44,7 @@ function Home() {
     <Navbar/>    
     <br /><br /><br /><br /><br /><br /><br /><br />    
         
-      <div className="mainContainer mb-5">
-        <h1>Home</h1>
+      <div className="mainContainer mb-5">        
         {currentUser && <p>Connected</p>}
         <div className="buttons">
           <button onClick={clickLogin}>

@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
 import { useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase-congif";
-
-
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +21,6 @@ const Login = () => {
 
   return (
     <div>
-    
       <form className="loginForm" onSubmit={handleSubmit}>
         <input
           placeholder="email"

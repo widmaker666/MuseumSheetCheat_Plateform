@@ -7,8 +7,7 @@ const Contact = () => {
   return (
     <div>
       <Navbar />
-      <br /><br /><br /><br /><br />
-      <h1>Contact</h1>
+      <br /><br /><br /><br /><br />      
       <FormEmail />
     </div>
   );

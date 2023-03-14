@@ -10,7 +10,7 @@ const Random = () => {
     <div>
     <Navbar/>
     <br /><br /><br /><br /><br />
-      <h1>Random</h1>
+    
       <PaintCardRandom />
     </div>
   );
