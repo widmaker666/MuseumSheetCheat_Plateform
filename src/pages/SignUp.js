@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { ref, set } from "firebase/database";
 
-import Navigation from "../components/Navigation";
+
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
