@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const FormEmail = () => {
-  //! permet de récupérer toutes les données des cases du formulaire
   const form = useRef();
 
   const sendEmail = (e) => {
