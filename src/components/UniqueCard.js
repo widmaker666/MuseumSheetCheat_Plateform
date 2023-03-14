@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Alien from "../assets/images/alien.png";
+
 
 const UniqueCard = () => {
 
   //! faire toutes les validates et corriger les bugs d'affichages
   const [paintData, setPaintData] = useState([]);
   const [description, setDescription] = useState({});
-  const params = useParams();
+  const params = useParams();  
 
   const apiId = params.uid;
 
