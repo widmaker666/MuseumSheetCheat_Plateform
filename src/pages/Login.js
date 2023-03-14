@@ -23,29 +23,29 @@ const Login = () => {
 
   return (
     <div>
-      <Navigation />
-      <div className="form_container">
-        <div className="formulaire">
-        <form className="loginForm" onSubmit={handleSubmit}>
-          <h2>Login</h2>
-          <p>Email</p>
-        <input
-          
-          type="email"
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-        <p>Password</p>
-        <input
-          
-          type="password"
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <div className="btn">
-        <button>Login</button>
+      <div className="login">
+        <Navigation />
+        <div className="form_container">
+          <div className="formulaire">
+            <form className="loginForm" onSubmit={handleSubmit}>
+              <h2>Login</h2>
+              <p>Email</p>
+              <input
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+              ></input>
+              <p>Password</p>
+              <input
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
+              <div className="btn">
+                <button>Login</button>
+              </div>
+            </form>
+          </div>
+          <img className="img_form" src={login_img} alt="image" />
         </div>
-      </form>
-        </div>
-        <img className="img_form" src={login_img} alt="image" />
       </div>
     </div>
   );
