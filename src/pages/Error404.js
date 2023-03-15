@@ -4,7 +4,7 @@ const Error404 = () => {
   return (
     <>
       <section class="page_404">
-        <div class="container">
+        <div class="error_container">
           <div class="row">
             <div class="col-sm-12 ">
               <div class="col-sm-10 col-sm-offset-1  text-center">

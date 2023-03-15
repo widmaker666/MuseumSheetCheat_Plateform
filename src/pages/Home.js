@@ -40,7 +40,7 @@ function Home() {
 
   return (
     <div>
-    
+    <div className="home">
     <Navbar/>    
     <br /><br /><br /><br /><br /><br /><br /><br />    
         
@@ -54,6 +54,7 @@ function Home() {
         </div>
 
         <PaintCard />
+      </div>
       </div>
     </div>
   );
