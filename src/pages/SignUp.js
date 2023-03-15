@@ -22,19 +22,34 @@ const SignUp = () => {
   const passwordHasNumber = /[0-9]/.test(password);
   const passwordHasValidLength = password.length >= 8;
 
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+
+  const handlePasswordFocus = () => {
+    setIsPasswordFocused(true);
+  };
+
+  const handlePasswordBlur = () => {
+    setIsPasswordFocused(false);
+  };
+
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault();  
-    
-    if (password.length < 8 || !/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password) || !/[^a-zA-Z0-9]/.test(password)) {
-      setValidationPassword("Password need to be more secured");      
+    e.preventDefault();
+
+    if (
+      password.length < 8 ||
+      !/[a-z]/.test(password) ||
+      !/[A-Z]/.test(password) ||
+      !/[0-9]/.test(password) ||
+      !/[^a-zA-Z0-9]/.test(password)
+    ) {
+      setValidationPassword("Password need to be more secured");
       return;
-    }else if (password !== repeatPassword) {
-      setValidation("Passwords must be the same");      
+    } else if (password !== repeatPassword) {
+      setValidation("Passwords must be the same");
       return;
     }
-    
 
     function onRegister() {
       createUserWithEmailAndPassword(auth, email, password)
@@ -46,10 +61,9 @@ const SignUp = () => {
           });
         })
         .catch((error) => console.log(error));
-        navigate('/home')    
+      navigate("/home");
     }
     onRegister();
-    
   };
 
   return (
@@ -58,7 +72,7 @@ const SignUp = () => {
         <Navigation />
         <div className="form_container">
           <div className="formulaire">
-            <form className="loginForm" onSubmit={handleSubmit}>
+            <form className="signupForm" onSubmit={handleSubmit}>
               <h2>Sign up</h2>
               <p>first name</p>
               <input
@@ -81,54 +95,58 @@ const SignUp = () => {
               <p>password</p>
               <input
                 onChange={(e) => setPassword(e.target.value)}
+                onFocus={handlePasswordFocus}
+                onBlur={handlePasswordBlur}
                 required
                 type="password"
               ></input>
-              <p className="text-danger mt-1">{validationPassword}</p>
-              <ul>
-                <li
-                  style={{
-                    color: passwordHasLowercaseLetter ? "green" : "red",
-                  }}
-                >
-                  One lowerCase letter
-                </li>
-                <li
-                  style={{
-                    color: passwordHasUppercaseLetter ? "green" : "red",
-                  }}
-                >
-                  One UpperCase letter
-                </li>
-                <li
-                  style={{
-                    color: passwordHasSpecialCharacter ? "green" : "red",
-                  }}
-                >
-                  One special character
-                </li>
-                <li style={{ color: passwordHasNumber ? "green" : "red" }}>
-                  One number
-                </li>
-                <li
-                  style={{
-                    color: passwordHasValidLength ? "green" : "red",
-                  }}
-                >
-                  minimum 8 characters
-                </li>
-              </ul>
-              <div className="mb-3">
-                <label htmlFor="repeatPwd" className="form-label">
-                  Repeat Password
-                </label>
-                <input
-                  required
-                  type="password"
-                  onChange={(e) => setRepeatPassword(e.target.value)}
-                />
-              </div>
-              <p className="text-danger mt-1">{validation}</p>
+              <p className="text-danger-1">{validationPassword}</p>
+              {isPasswordFocused && (
+                <div className="valid">
+                  <ul>
+                    <li
+                      style={{
+                        color: passwordHasLowercaseLetter ? "green" : "red",
+                      }}
+                    >
+                      One lowerCase letter
+                    </li>
+                    <li
+                      style={{
+                        color: passwordHasUppercaseLetter ? "green" : "red",
+                      }}
+                    >
+                      One UpperCase letter
+                    </li>
+                    <li
+                      style={{
+                        color: passwordHasSpecialCharacter ? "green" : "red",
+                      }}
+                    >
+                      One special character
+                    </li>
+                    <li style={{ color: passwordHasNumber ? "green" : "red" }}>
+                      One number
+                    </li>
+                    <li
+                      style={{
+                        color: passwordHasValidLength ? "green" : "red",
+                      }}
+                    >
+                      minimum 8 characters
+                    </li>
+                  </ul>
+                </div>
+              )}
+
+              <p>confirm password</p>
+              <input
+                required
+                type="password"
+                onChange={(e) => setRepeatPassword(e.target.value)}
+              />
+
+              <p className="text-danger-2">{validation}</p>
               <div className="btn">
                 <button>Sign Up</button>
               </div>
