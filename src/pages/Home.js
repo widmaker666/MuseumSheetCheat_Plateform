@@ -37,7 +37,7 @@ function Home() {
 
   return (
     
-    <div> 
+    
        
       <div className="home">
         <Navbar />
@@ -68,7 +68,6 @@ function Home() {
           <PaintCard />
         </div>
       </div>  
-    </div>
      )
 }
 

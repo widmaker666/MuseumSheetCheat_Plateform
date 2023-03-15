@@ -6,7 +6,7 @@ import UniqueCard from "../components/UniqueCard";
 
 const SinglePaint = () => {
   return (
-    <div> 
+    <div className="single"> 
     <Navbar/>
     <br /><br /><br /><br /><br />      
       <UniqueCard />
