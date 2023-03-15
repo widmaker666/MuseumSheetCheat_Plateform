@@ -45,7 +45,7 @@ function Home() {
     <br /><br /><br /><br /><br /><br /><br /><br />    
         
       <div className="mainContainer mb-5">        
-        {currentUser && <p>Connected</p>}
+        {currentUser && <p>{`Welcome to the Museum Sheet Cheat, you're connected now ! Nice visit ${username}`}</p>}
         <div className="buttons">
           <button onClick={clickLogin}>
             {currentUser ? "Log Out" : "Login"}
