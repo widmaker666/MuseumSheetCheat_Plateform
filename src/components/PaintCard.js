@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
-
 const PaintCard = () => {
   const [paintData, setPaintData] = useState([]);
   const [rangeValue, setRangeValue] = useState(24);
@@ -38,9 +37,8 @@ const PaintCard = () => {
             )
             .sort((a, b) => b.id - a.id)
             .slice(0, rangeValue)
-            .map((paint, index) => <Card key={index} paint={paint} />)              
-            }
-      </ul>      
+            .map((paint, index) => <Card key={index} paint={paint} />)}
+      </ul>
     </div>
   );
 };

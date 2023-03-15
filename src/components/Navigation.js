@@ -10,8 +10,19 @@ const Navigation = () => {
     setShowMenu(!showMenu);
   };
 
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
+      document.querySelector(".navbar").classList.add("visible");
+    } else {
+      document.querySelector(".navbar").classList.remove("visible");
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
   return (
-    <div className="navbar">
+    <div className="navbar visible">
       <div className="logo-container">
         <NavLink to="/">
           <img src={Logo} alt="Logo MSC" className="logo" />

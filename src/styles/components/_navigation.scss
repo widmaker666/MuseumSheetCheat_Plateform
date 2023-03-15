@@ -11,6 +11,10 @@ a{
     text-decoration: none;
 }
 
+.navbar.hidden {
+    display: none;
+  }
+
 .navbar{
     font-family: 'Italiana', serif;
     position: fixed;
@@ -19,7 +23,14 @@ a{
     align-items: center;
     width: 100%;
     font-size: 1.5rem;
+    z-index: 9999;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
 }
+
+.navbar.visible {
+    transform: translateY(0%);
+  }
 
 .navlink{
     display: flex;
