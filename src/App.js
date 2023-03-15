@@ -15,19 +15,19 @@ import Welcome from "./pages/Welcome";
 function App() {
   return (
     <AuthProvider>
-    <div className="app">
-        <BrowserRouter>              
+      <div className="app">
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Welcome />} />
-            <Route path="/discover" element={<Discover />} />            
-            <Route exact path="/home" element={<Home />} />            
-            <Route exact path="/random" element={<Random />} />                        
-            <Route exact path="/contact" element={<Contact />} />                        
-            <Route exact path="/about" element={<About />} />                        
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/signup" element={<SignUp />} />            
+            <Route path="/discover" element={<Discover />} />                    
+            <Route exact path="/home" element={<Home />} />,
+            <Route exact path="/random" element={<Random />} />,
+            <Route exact path="/contact" element={<Contact />} />,
+            <Route exact path="/about" element={<About />} />,
             <Route exact path="/one-paint/:uid" element={<SinglePaint />} />            
-            <Route path="*" element={<Error404 />} />           
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<SignUp />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </BrowserRouter>
       </div>

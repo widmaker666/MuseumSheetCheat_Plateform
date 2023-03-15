@@ -7,13 +7,11 @@ import { ref, onValue } from "firebase/database";
 import PaintCard from "../components/PaintCard";
 import Navbar from "../components/Navbar";
 
-
-
 function Home() {
   const { currentUser } = useContext(AuthContext);
-  const [username, setUsername] = useState("");  
+  const [username, setUsername] = useState("");
   const navigate = useNavigate();
-  console.log(username);
+
   useEffect(() => {
     if (currentUser) {
       const starCountRef = ref(db, "users/" + currentUser.uid);
@@ -34,30 +32,44 @@ function Home() {
     }
   };
 
-  const clickSignup = () => {
-    navigate("/signup");
-  };
+  const clickSignup = () => navigate("/signup");
+  const logOut = () => navigate("/login");
 
   return (
-    <div>
-    <div className="home">
-    <Navbar/>    
-    <br /><br /><br /><br /><br /><br /><br /><br />    
-        
-      <div className="mainContainer mb-5">        
-        {currentUser && <p>{`Welcome to the Museum Sheet Cheat, you're connected now ! Nice visit ${username}`}</p>}
-        <div className="buttons">
-          <button onClick={clickLogin}>
-            {currentUser ? "Log Out" : "Login"}
-          </button>
-          {!currentUser && <button onClick={clickSignup}>Sign Up</button>}
+    
+    <div> 
+       
+      <div className="home">
+        <Navbar />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div className="mainContainer mb-5">
+          {currentUser && (
+            <p>{`Welcome to the Museum Sheet Cheat, you're connected now ! Nice visit ${username}`}</p>
+          )}
+          <div className="buttons">
+            <button onClick={clickLogin}>
+              {currentUser ? (
+                <button className="buttons" onClick={logOut}>
+                  Log Out
+                </button>
+              ) : (
+                "Login"
+              )}
+            </button>
+            {!currentUser && <button onClick={clickSignup}>Sign Up</button>}
+          </div>
+          <PaintCard />
         </div>
-
-        <PaintCard />
-      </div>
-      </div>
+      </div>  
     </div>
-  );
+     )
 }
 
 export default Home;

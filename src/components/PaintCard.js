@@ -9,8 +9,8 @@ const PaintCard = () => {
   //-Nouvelle API Chicago museum plus simple je pense à tester
   const API = "https://api.artic.edu/api/v1/artworks?limit=100";
 
-  useEffect(() => {
-    axios.get(API).then((res) => setPaintData(res.data.data));
+  useEffect(() => { 
+    axios.get(API).then((res) => setPaintData(res.data.data)).catch((err) => console.log(err));
   }, []);
 
   return (
