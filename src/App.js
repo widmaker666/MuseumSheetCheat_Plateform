@@ -8,6 +8,7 @@ import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Random from "./pages/Random";
+import Rgpd from "./pages/Rgpd";
 import SignUp from "./pages/SignUp";
 import SinglePaint from "./pages/SinglePaint";
 import Welcome from "./pages/Welcome";
@@ -27,6 +28,7 @@ function App() {
             <Route exact path="/one-paint/:uid" element={<SinglePaint />} />            
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/signup" element={<SignUp />} />
+            <Route path="/rgpd" element={<Rgpd />} />
             <Route path="*" element={<Error404 />} />
           </Routes>
         </BrowserRouter>
