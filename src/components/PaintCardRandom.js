@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 const PaintCardRandom = () => {
   const [paintData, setPaintData] = useState([]);
   const [description, setDescription] = useState({});
+  const [medium, setMedium] = useState({});
+  const [dimensions, setDimensions] = useState({});
+  const [attribution, setAttribution] = useState("");
   const index = Math.floor(Math.random() * 99);
 
   const apiId =
@@ -22,6 +25,25 @@ const PaintCardRandom = () => {
       .get(apiDescription)
       .then((res) => res.data)
       .then((data) => setDescription(data.description[0]));
+  }, []);
+  useEffect(() => {
+    axios
+      .get(apiDescription)
+      .then((res) => res.data)
+      .then((data) => setMedium(data.metadata[1]));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(apiDescription)
+      .then((res) => res.data)
+      .then((data) => setDimensions(data.metadata[2]));
+  }, []);
+  useEffect(() => {
+    axios
+      .get(apiDescription)
+      .then((res) => res.data)
+      .then((data) => setAttribution(data.attribution));
   }, []);
 
   return (
@@ -58,6 +80,31 @@ const PaintCardRandom = () => {
           {description.value === undefined || description.value === null
             ? "Description Unknown"
             : description.value}
+        </p>
+        <p>
+          {medium.label === undefined || medium.label === null
+            ? "No Medium"
+            : medium.label}
+        </p>
+        <p>
+          {medium.value === undefined || medium.value === null
+            ? "No infos"
+            : medium.value}
+        </p>
+        <p>
+          {dimensions.label === undefined || dimensions.label === null
+            ? "No Dimension"
+            : dimensions.label}
+        </p>
+        <p>
+          {dimensions.value === undefined || dimensions.value === null
+            ? "No infos"
+            : dimensions.value}
+        </p>
+        <p>
+          {attribution === undefined || attribution === null
+            ? "No infos"
+            : attribution}
         </p>
       </div>
     </div>
