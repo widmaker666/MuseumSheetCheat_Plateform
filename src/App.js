@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "../src/context/AuthProvider";
+import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Discover from "./pages/Discover";
@@ -20,12 +21,12 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Welcome />} />
-            <Route path="/discover" element={<Discover />} />                    
+            <Route path="/discover" element={<Discover />} />
             <Route exact path="/home" element={<Home />} />,
             <Route exact path="/random" element={<Random />} />,
             <Route exact path="/contact" element={<Contact />} />,
             <Route exact path="/about" element={<About />} />,
-            <Route exact path="/one-paint/:uid" element={<SinglePaint />} />            
+            <Route exact path="/one-paint/:uid" element={<SinglePaint />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/signup" element={<SignUp />} />
             <Route path="/rgpd" element={<Rgpd />} />
@@ -33,6 +34,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
+      <Footer />
     </AuthProvider>
   );
 }
