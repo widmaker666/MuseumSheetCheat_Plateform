@@ -1,8 +1,12 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Rgpd = () => {
   return (
     <>
+    <Navbar/>
+    <br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
       <div className="web_ui__Container__container web_ui__Container__styling-wide">
         <span className="web_ui__Text__text web_ui__Text__body web_ui__Text__left">
           <h1 className="c-text--responsive-small-heading c-text--left c-text">
