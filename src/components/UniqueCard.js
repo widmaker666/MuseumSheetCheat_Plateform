@@ -6,7 +6,11 @@ const UniqueCard = () => {
   //! faire toutes les validates et corriger les bugs d'affichages
   const [paintData, setPaintData] = useState([]);
   const [description, setDescription] = useState({});
+  const [medium, setMedium] = useState({});
+  const [dimensions, setDimensions] = useState({});
+  const [attribution, setAttribution] = useState("");
   const params = useParams();
+
 
   const apiId = params.uid;
 
@@ -23,6 +27,26 @@ const UniqueCard = () => {
       .then((res) => res.data)
       .then((data) => setDescription(data.description[0]));
   }, []);
+
+  useEffect(() => {
+    axios
+      .get(apiDescription)
+      .then((res) => res.data)
+      .then((data) => setMedium(data.metadata[1]));
+  }, []);
+
+    useEffect(() => {
+      axios
+        .get(apiDescription)
+        .then((res) => res.data)
+        .then((data) => setDimensions(data.metadata[2]));
+    }, []);
+    useEffect(() => {
+      axios
+        .get(apiDescription)
+        .then((res) => res.data)
+        .then((data) => setAttribution(data.attribution));
+    }, []);
 
   return (
     <div className="paints">
@@ -60,6 +84,32 @@ const UniqueCard = () => {
           {description.value === undefined || description.value === null
             ? "No title"
             : description.value}
+        </p>
+        <br />
+        <p>
+          {medium.label === undefined || medium.label === null
+            ? "No Medium"
+            : medium.label}
+        </p>
+        <p>
+          {medium.value === undefined || medium.value === null
+            ? "No infos"
+            : medium.value}
+        </p>
+        <p>
+          {dimensions.label === undefined || dimensions.label === null
+            ? "No Dimension"
+            : dimensions.label}
+        </p>
+        <p>
+          {dimensions.value === undefined || dimensions.value === null
+            ? "No infos"
+            : dimensions.value}
+        </p>
+        <p>
+          {attribution === undefined || attribution === null
+            ? "No infos"
+            : attribution}
         </p>
       </div>
     </div>
