@@ -1,21 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Loader from "./Loader";
+
 
 const UniqueCard = () => {
-  //! faire toutes les validates et corriger les bugs d'affichages
+  //!Constants
   const [paintData, setPaintData] = useState([]);
   const [description, setDescription] = useState({});
   const [medium, setMedium] = useState({});
   const [dimensions, setDimensions] = useState({});
   const [attribution, setAttribution] = useState("");
+  const [loading, setLoading] = useState(true);
   const params = useParams();
   const [showModal, setShowModal] = useState(false);
 
-  const apiId = params.uid;
+  //!Constants API
 
+  const apiId = params.uid;
   const API = `https://api.artic.edu/api/v1/artworks/${apiId}`;
   const apiDescription = `https://api.artic.edu/api/v1/artworks/${apiId}/manifest.json`;
+
 
   const handleShowModal = () => {
     setShowModal(!showModal);
@@ -25,7 +30,11 @@ const UniqueCard = () => {
     setShowModal(false);
   };
 
+  //!Functions
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
     axios.get(API).then((res) => setPaintData(res.data.data));
   }, []);
 
@@ -56,7 +65,9 @@ const UniqueCard = () => {
       .then((data) => setAttribution(data.attribution));
   }, []);
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <>
       <div className="paints">
         <img
@@ -101,6 +112,7 @@ const UniqueCard = () => {
             {description.value === undefined || description.value === null ? (
               <p>LOADING...</p>
             ) : (
+
               <>
                 {description.value.length > 150 ? (
                   <>
@@ -130,6 +142,7 @@ const UniqueCard = () => {
               </>
             )}
           </p>
+
 
           <br />
           <p>

@@ -18,8 +18,7 @@ const Footer = () => {
       <li className="nav-item"><a href="/rgpd" className="nav-link px-2 text-muted">Policy Privacy</a></li>
       <li className="nav-item"><a href="https://api.artic.edu/docs/" className="nav-link px-2 text-muted">API used</a></li>      
     </ul>
-  </footer>
-    
+  </footer>    
     </>
 
   );

@@ -6,9 +6,13 @@ import PaintCardRandom from "../components/PaintCardRandom";
 const Random = () => {
   return (
     <div className="today">
-    <Navbar/>
-    <br /><br /><br /><br /><br />
-    
+      <Navbar />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
       <PaintCardRandom />
       <Footer />
     </div>

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "../src/context/AuthProvider";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Discover from "./pages/Discover";
@@ -14,8 +15,9 @@ import SignUp from "./pages/SignUp";
 import SinglePaint from "./pages/SinglePaint";
 import Welcome from "./pages/Welcome";
 
-function App() {
-  return (
+function App() { 
+
+  return ( 
     <AuthProvider>
       <div className="app">
         <BrowserRouter>
@@ -33,7 +35,7 @@ function App() {
             <Route path="*" element={<Error404 />} />
           </Routes>
         </BrowserRouter>
-      </div>      
+      </div>
     </AuthProvider>
   );
 }

@@ -6,10 +6,12 @@ import login_img from "../assets/images/login_img.jpg";
 import Navigation from "../components/Navigation";
 
 const Login = () => {
+  //!Constants
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  //!Functions
   const handleSubmit = (e) => {
     e.preventDefault();
     function onRegister() {

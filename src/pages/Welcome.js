@@ -34,17 +34,9 @@ const Welcome = () => {
           </NavLink>
         </div>
       </div>
-      <img
-        className="img_harley"
-        src={ambush}
-        alt="image_harley_weir"
-      />
-      </div>
-  )
-}
-      
-      
-     
-    
+      <img className="img_harley" src={ambush} alt="image_harley_weir" />
+    </div>
+  );
+};
 
 export default Welcome;
