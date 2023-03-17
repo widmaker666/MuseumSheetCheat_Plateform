@@ -1,0 +1,33 @@
+.Btitle {
+  text-align: center;
+  justify-content: center;
+  font-size: 140px;
+  background-color: black;
+}
+
+.title {
+  max-width: 50%;
+  text-align: center;
+  justify-content: center;
+  font-size: 100px;
+
+}
+
+.img-container {
+  position: relative;
+  left: 1200px;
+  bottom: 300px;
+
+  img {
+    height: 400px;
+    width: 400px;
+
+  }
+}
+.content{
+  padding-top: 30px;
+  max-width: 50%;
+  text-align: center;
+  justify-content: left;
+  font-size: 40px;
+}

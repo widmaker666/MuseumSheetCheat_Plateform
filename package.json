@@ -18,6 +18,7 @@
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "sass": "^1.58.3",
+    "scrollmagic": "^2.0.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -26,7 +27,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",
