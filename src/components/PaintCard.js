@@ -1,16 +1,26 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import Loader from "./Loader";
 
 const PaintCard = () => {
+  //!Constants
   const [paintData, setPaintData] = useState([]);
-  const [rangeValue, setRangeValue] = useState(24);
+  const [rangeValue, setRangeValue] = useState(12);
+  const [loading, setLoading] = useState(true);
 
-  //-Nouvelle API Chicago museum plus simple je pense à tester
+  //!Constants API
   const API = "https://api.artic.edu/api/v1/artworks?limit=100";
 
-  useEffect(() => { 
-    axios.get(API).then((res) => setPaintData(res.data.data)).catch((err) => console.log(err));
+  //!Functions
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+    axios
+      .get(API)
+      .then((res) => setPaintData(res.data.data))
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -25,20 +35,24 @@ const PaintCard = () => {
         />
         <span className="m-3">{rangeValue}</span>
       </div>
-      <ul>
-        {paintData &&
-          paintData
-            .filter(
-              (paint) =>
-                paint.artist_title !== null &&
-                paint.title !== null &&
-                paint.image_id !== null &&
-                paint.place_of_origin !== null
-            )
-            .sort((a, b) => b.id - a.id)
-            .slice(0, rangeValue)
-            .map((paint, index) => <Card key={index} paint={paint} />)}
-      </ul>
+      {loading ? (
+        <Loader />
+      ) : (
+        <ul>
+          {paintData &&
+            paintData
+              .filter(
+                (paint) =>
+                  paint.artist_title !== null &&
+                  paint.title !== null &&
+                  paint.image_id !== null &&
+                  paint.place_of_origin !== null
+              )
+              .sort((a, b) => b.id - a.id)
+              .slice(0, rangeValue)
+              .map((paint, index) => <Card key={index} paint={paint} />)}
+        </ul>
+      )}
     </div>
   );
 };

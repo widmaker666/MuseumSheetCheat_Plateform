@@ -1,22 +1,28 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Loader from "./Loader";
 
 const PaintCardRandom = () => {
+  //!Constantes
   const [paintData, setPaintData] = useState([]);
   const [description, setDescription] = useState({});
   const [medium, setMedium] = useState({});
   const [dimensions, setDimensions] = useState({});
   const [attribution, setAttribution] = useState("");
+  const [loading, setLoading] = useState(true);
   const index = Math.floor(Math.random() * 99);
 
+  //! Constantes API
   const apiId =
     paintData.id === undefined || paintData.id === null ? 250745 : paintData.id;
-
   const API = "https://api.artic.edu/api/v1/artworks?limit=100";
-
   const apiDescription = `https://api.artic.edu/api/v1/artworks/${apiId}/manifest.json`;
 
+  //!Fonctions
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 400);
     axios.get(API).then((res) => setPaintData(res.data.data[index]));
   }, []);
 
@@ -46,7 +52,9 @@ const PaintCardRandom = () => {
       .then((data) => setAttribution(data.attribution));
   }, []);
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <div className="paints">
       <img
         src={
@@ -76,6 +84,7 @@ const PaintCardRandom = () => {
             ? "No Origin"
             : paintData.place_of_origin}
         </p>
+
         <p>
           {description.value === undefined || description.value === null
             ? "Description Unknown"
@@ -107,6 +116,7 @@ const PaintCardRandom = () => {
             : attribution}
         </p>
       </div>
+      )
     </div>
   );
 };
