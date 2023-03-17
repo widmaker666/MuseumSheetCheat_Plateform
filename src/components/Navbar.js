@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import hambmenu from "../assets/images/hambmenu.jpg";
+import Player from "./Player";
 
 const Navbar = () => {
   //!Constants
@@ -35,6 +36,9 @@ const Navbar = () => {
       </div>
       <div className={`navlink ${showMenu ? "mobile-menu" : ""}`}>
         <ul>
+          <li>
+            <Player />
+          </li>
           <NavLink to="/random">
             <li>Today</li>
           </NavLink>
