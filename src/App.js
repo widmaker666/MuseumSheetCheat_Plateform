@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "../src/context/AuthProvider";
-import Footer from "./components/Footer";
-import Loader from "./components/Loader";
+import PrivateRoutes from "./components/PrivateRoutes";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Discover from "./pages/Discover";
@@ -24,13 +23,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/discover" element={<Discover />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          <Route element={<PrivateRoutes/>}>
+            <Route path="/random" element={<Random />} />,
             <Route exact path="/home" element={<Home />} />,
-            <Route exact path="/random" element={<Random />} />,
-            <Route exact path="/contact" element={<Contact />} />,
-            <Route exact path="/about" element={<About />} />,
-            <Route exact path="/one-paint/:uid" element={<SinglePaint />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/signup" element={<SignUp />} />
+            <Route path="/contact" element={<Contact />} />,
+            <Route path="/about" element={<About />} />,
+            <Route path="/one-paint/:uid" element={<SinglePaint />} />
+          </Route>
             <Route path="/rgpd" element={<Rgpd />} />
             <Route path="*" element={<Error404 />} />
           </Routes>
