@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "../src/context/AuthProvider";
+import Player from "./components/Player";
+
 import PrivateRoutes from "./components/PrivateRoutes";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -17,8 +19,8 @@ import Welcome from "./pages/Welcome";
 function App() { 
 
   return ( 
-    <AuthProvider>
-      <div className="app">
+    <AuthProvider>           
+      <div className="app">   
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Welcome />} />
