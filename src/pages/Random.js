@@ -7,7 +7,7 @@ import PaintCardRandom from "../components/PaintCardRandom";
 
 const Random = () => {
   return (
-    <div>
+    <div className="today">
     <Navbar/>
     <br /><br /><br /><br /><br />
     
