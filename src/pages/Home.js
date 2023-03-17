@@ -8,6 +8,7 @@ import PaintCard from "../components/PaintCard";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+
 function Home() {
   const { currentUser } = useContext(AuthContext);
   const [username, setUsername] = useState("");
@@ -37,7 +38,7 @@ function Home() {
   const logOut = () => navigate("/login");
 
   return (
-    <div className="home">
+    <div className="home">    
       <Navbar />
       <br />
       <br />
