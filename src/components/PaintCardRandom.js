@@ -115,8 +115,7 @@ const PaintCardRandom = () => {
             ? "No infos"
             : attribution}
         </p>
-      </div>
-      )
+      </div>      
     </div>
   );
 };
