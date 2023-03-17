@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { ref, onValue } from "firebase/database";
 import PaintCard from "../components/PaintCard";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   const { currentUser } = useContext(AuthContext);
@@ -36,39 +37,37 @@ function Home() {
   const logOut = () => navigate("/login");
 
   return (
-    
-    
-       
-      <div className="home">
-        <Navbar />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <div className="mainContainer mb-5">
-          {currentUser && (
-            <p>{`Welcome to the Museum Sheet Cheat, you're connected now ! Nice visit ${username}`}</p>
-          )}
-          <div className="buttons">
-            <button onClick={clickLogin}>
-              {currentUser ? (
-                <button className="buttons" onClick={logOut}>
-                  Log Out
-                </button>
-              ) : (
-                "Login"
-              )}
-            </button>
-            {!currentUser && <button onClick={clickSignup}>Sign Up</button>}
-          </div>
-          <PaintCard />
+    <div className="home">
+      <Navbar />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="mainContainer mb-5">
+        {currentUser && (
+          <p>{`Welcome to the Museum Sheet Cheat, you're connected now ! Nice visit ${username}`}</p>
+        )}
+        <div className="buttons">
+          <button onClick={clickLogin}>
+            {currentUser ? (
+              <button className="buttons" onClick={logOut}>
+                Log Out
+              </button>
+            ) : (
+              "Login"
+            )}
+          </button>
+          {!currentUser && <button onClick={clickSignup}>Sign Up</button>}
         </div>
-      </div>  
-     )
+        <PaintCard />
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Home;

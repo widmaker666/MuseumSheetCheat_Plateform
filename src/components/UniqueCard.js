@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+
 const UniqueCard = () => {
   //! faire toutes les validates et corriger les bugs d'affichages
   const [paintData, setPaintData] = useState([]);
@@ -49,12 +50,14 @@ const UniqueCard = () => {
     }, []);
 
   return (
+    <>
+
     <div className="paints">
       <img
         className="art-img"
         src={
           paintData.image_id === undefined || paintData.image_id === null
-            ? "LOADING"
+            ? <p>LOADING...</p>
             : `https://www.artic.edu/iiif/2/${paintData.image_id}/full/843,/0/default.jpg`
         }
         alt="img"
@@ -62,57 +65,58 @@ const UniqueCard = () => {
       <div className="infos-card">
         <h2>
           {paintData.title === undefined || paintData.title === null
-            ? "No title"
+            ? <p>LOADING...</p>
             : paintData.title}
         </h2>
         <br />
         <h4>
           {paintData.artist_title === undefined ||
           paintData.artist_title === null
-            ? "No Painter"
+            ? <p>LOADING...</p>
             : paintData.artist_title}
         </h4>
         <br />
         <p>
           {paintData.place_of_origin === undefined ||
           paintData.place_of_origin === null
-            ? "No title"
+            ? <p>LOADING...</p>
             : paintData.place_of_origin}
         </p>
         <br />
         <p className="desc">
           {description.value === undefined || description.value === null
-            ? "No title"
+            ? <p>LOADING...</p>
             : description.value}
         </p>
         <br />
         <p>
           {medium.label === undefined || medium.label === null
-            ? "No Medium"
+            ? <p>LOADING...</p>
             : medium.label}
         </p>
         <p>
           {medium.value === undefined || medium.value === null
-            ? "No infos"
+            ? <p>LOADING...</p>
             : medium.value}
         </p>
         <p>
           {dimensions.label === undefined || dimensions.label === null
-            ? "No Dimension"
+            ? <p>LOADING...</p>
             : dimensions.label}
         </p>
         <p>
           {dimensions.value === undefined || dimensions.value === null
-            ? "No infos"
+            ? <p>LOADING...</p>
             : dimensions.value}
         </p>
         <p>
           {attribution === undefined || attribution === null
-            ? "No infos"
+            ? <p>LOADING...</p>
             : attribution}
         </p>
       </div>
-    </div>
+    </div>    
+    </>
   );
 };
 
