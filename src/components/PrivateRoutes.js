@@ -11,11 +11,11 @@ const PrivateRoutes = () => {
     currentUser.accessToken === null ||
     currentUser.accessToken === undefined
   ) {
-    let auth = { token: false };
-    return auth.token ? <Outlet /> : <Navigate to="/login" />;
+    /* let auth = { token: false }; */
+    return <Navigate to="/login" />;
   } else {
-    let auth = { token: true };
-    return auth.token ? <Outlet /> : <Navigate to="/login" />;
+    /*  let auth = { token: true }; */
+    return <Outlet />;
   }
 };
 
