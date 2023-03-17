@@ -10,6 +10,7 @@ const Random = () => {
     <br /><br /><br /><br /><br />
     
       <PaintCardRandom />
+      <Footer />
     </div>
   );
 };
