@@ -4,15 +4,17 @@ import Logo from "../assets/images/logo.png";
 import hambmenu from "../assets/images/hambmenu.jpg";
 
 const Navigation = () => {
+  //!Constants
   const [showMenu, setShowMenu] = useState(false);
 
+  //!Functions
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };
 
-  var prevScrollpos = window.pageYOffset;
+  let prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
+    let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
       document.querySelector(".navbar").classList.add("visible");
     } else {

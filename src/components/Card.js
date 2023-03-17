@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 import Alien from "../assets/images/alien.png";
 
 const Card = ({ paint }) => {
-  //-Permet de récupérer l'id de la div cliqué ! Manque plus qu'à s'en servir pour faire afficher la peinture
   const navigate = useNavigate();
 
+  //!Functions
   const handleClick = (e) => {
     e.preventDefault();
     const idUrl = e.target.childNodes[1].data;

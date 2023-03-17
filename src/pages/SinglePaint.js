@@ -16,7 +16,9 @@ const SinglePaint = () => {
         <br />
         <UniqueCard />
       </div>
-      <div><Footer /></div>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };

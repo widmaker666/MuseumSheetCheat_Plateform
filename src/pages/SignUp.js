@@ -7,6 +7,7 @@ import signup_img from "../assets/images/signup_img.jpg";
 import Navigation from "../components/Navigation";
 
 const SignUp = () => {
+  //!Constants
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,16 +18,17 @@ const SignUp = () => {
   const [checked, setChecked] = useState(false);
   const [isPasswordFocused, setIsPasswordFocused] = useState(false);
   const [rgpd, setRgpd] = useState("");
-  
+  const navigate = useNavigate();
 
+  //!Const Validations
   const passwordHasLowercaseLetter = /[a-z]/.test(password);
   const passwordHasUppercaseLetter = /[A-Z]/.test(password);
   const passwordHasSpecialCharacter = /^(?=.*[!@#\$%\^&\*])/.test(password);
   const passwordHasNumber = /[0-9]/.test(password);
   const passwordHasValidLength = password.length >= 8;
 
-  const handleChange = () => setChecked(!checked); 
- 
+  //!Fonctions
+  const handleChange = () => setChecked(!checked);
 
   const handlePasswordFocus = () => {
     setIsPasswordFocused(true);
@@ -36,9 +38,7 @@ const SignUp = () => {
     setIsPasswordFocused(false);
   };
 
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) =>{ 
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (
@@ -54,10 +54,9 @@ const SignUp = () => {
       setValidation("Passwords must be the same");
       return;
     } else if (checked === false) {
-      setRgpd("You must check the conditions")
+      setRgpd("You must check the conditions");
       return;
-    }   
-  
+    }
 
     function onRegister() {
       createUserWithEmailAndPassword(auth, email, password)
@@ -152,7 +151,7 @@ const SignUp = () => {
                 type="password"
                 onChange={(e) => setRepeatPassword(e.target.value)}
               />
-              <p className="text-danger-2">{validation}</p>              
+              <p className="text-danger-2">{validation}</p>
               <label>
                 <input
                   type="checkbox"
