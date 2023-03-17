@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "./Loader";
 
+
 const UniqueCard = () => {
   //!Constants
   const [paintData, setPaintData] = useState([]);
@@ -12,14 +13,24 @@ const UniqueCard = () => {
   const [attribution, setAttribution] = useState("");
   const [loading, setLoading] = useState(true);
   const params = useParams();
+  const [showModal, setShowModal] = useState(false);
 
   //!Constants API
+
   const apiId = params.uid;
   const API = `https://api.artic.edu/api/v1/artworks/${apiId}`;
   const apiDescription = `https://api.artic.edu/api/v1/artworks/${apiId}/manifest.json`;
 
-  //!Functions
 
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  //!Functions
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -101,9 +112,38 @@ const UniqueCard = () => {
             {description.value === undefined || description.value === null ? (
               <p>LOADING...</p>
             ) : (
-              description.value
+
+              <>
+                {description.value.length > 150 ? (
+                  <>
+                    {description.value.slice(0, 150)}...
+                    <button onClick={handleShowModal}>show more</button>
+                    {showModal && (
+                      <div
+                        className="modal"
+                        onClick={() => setShowModal(false)}
+                      >
+                        <div className="modal-content">
+                          <span
+                            className="close"
+                            onClick={() => setShowModal(false)}
+                          >
+                            &times;
+                          </span>
+                          <h2>Description</h2>
+                          <p>{description.value}</p>
+                        </div>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  description.value
+                )}
+              </>
             )}
           </p>
+
+
           <br />
           <p>
             {medium.label === undefined || medium.label === null ? (
