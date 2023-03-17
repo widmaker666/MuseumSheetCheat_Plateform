@@ -43,12 +43,12 @@ const PaintCard = () => {
             paintData
               .filter(
                 (paint) =>
-                  paint.artist_title !== null &&
-                  paint.title !== null &&
-                  paint.image_id !== null &&
-                  paint.place_of_origin !== null
+                  paint.artist_title != null &&
+                  paint.title != null &&
+                  paint.image_id != null &&
+                  paint.place_of_origin != null
               )
-              .sort((a, b) => b.id - a.id)
+              .sort((a, b) => a.id - b.id)
               .slice(0, rangeValue)
               .map((paint, index) => <Card key={index} paint={paint} />)}
         </ul>

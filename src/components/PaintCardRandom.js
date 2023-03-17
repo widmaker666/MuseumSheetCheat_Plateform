@@ -58,7 +58,7 @@ const PaintCardRandom = () => {
     <div className="paints">
       <img
         src={
-          paintData.image_id === undefined || paintData.image_id === null
+          paintData.image_id == null 
             ? "No Picture"
             : `https://www.artic.edu/iiif/2/${paintData.image_id}/full/843,/0/default.jpg`
         }

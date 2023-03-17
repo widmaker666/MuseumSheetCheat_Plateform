@@ -35,11 +35,13 @@ const Login = () => {
               <input
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
+                autoComplete="off"
               ></input>
               <p>Password</p>
               <input
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
+                autoComplete="off"
               ></input>
               <div className="btn">
                 <button>Login</button>
