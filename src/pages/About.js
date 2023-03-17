@@ -1,12 +1,17 @@
 import React from "react";
-import { Container, Row, Col, Image} from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const About = () => {
   return (
     <>
       <Navbar />
-      <br /><br /><br /><br /><br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Container className="my-5">
         <Row>
           <Col lg={8}>
@@ -67,6 +72,9 @@ const About = () => {
           </Col>
         </Row>
       </Container>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };

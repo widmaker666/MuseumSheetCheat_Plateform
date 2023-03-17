@@ -33,8 +33,7 @@ function App() {
             <Route path="*" element={<Error404 />} />
           </Routes>
         </BrowserRouter>
-      </div>
-      <Footer />
+      </div>      
     </AuthProvider>
   );
 }
