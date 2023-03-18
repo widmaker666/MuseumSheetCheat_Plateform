@@ -2,13 +2,11 @@
 // .single { overflow-y: visible }
 // .single { overflow-y:auto }
 
-
 .single{
     position:absolute;
     padding:0;
-    margin:0;
-    background-color: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgb(54, 19, 54) 0%,rgb(145, 47, 112) 35%,rgb(223, 246, 247)) 100%;
+    margin:0;    
+    background: center/ cover no-repeat  url(../../assets/images/mur.png);
     width: 100%;
     height: auto;
     overflow-y: hidden;
@@ -60,7 +58,7 @@
 
 .art-img{
     max-height: auto;
-    max-width: 40%;
+    max-width: 28%;
     float: left;
     margin-left: 80px;
     border: 10px solid black;
@@ -68,7 +66,7 @@
 
 .infos-card{
     float: right;
-    width: 45%;   
+    width: 55%;   
     color: black;
 }
 
@@ -89,6 +87,6 @@
 }
 
 .desc{
-    margin-left: 50px;
+    margin-left: 20px;
     margin-right: 80px;
 }

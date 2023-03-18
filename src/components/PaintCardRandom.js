@@ -55,68 +55,70 @@ const PaintCardRandom = () => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="paints">
-      <img
-        src={
-          paintData.image_id == null 
-            ? "No Picture"
-            : `https://www.artic.edu/iiif/2/${paintData.image_id}/full/843,/0/default.jpg`
-        }
-        width="500px"
-        height="auto"
-        alt=""
-      />
-      <div className="infos-card">
-        <h2>
-          {paintData.title === undefined || paintData.title === null
-            ? "No Title"
-            : paintData.title}
-        </h2>
-        <h4>
-          {paintData.artist_title === undefined ||
-          paintData.artist_title === null
-            ? "Unsigned"
-            : paintData.artist_title}
-        </h4>
-        <p>
-          {paintData.place_of_origin === undefined ||
-          paintData.place_of_origin === null
-            ? "No Origin"
-            : paintData.place_of_origin}
-        </p>
+    
+      <div className="paints">
+        <img
+          src={
+            paintData.image_id == null
+              ? "No Picture"
+              : `https://www.artic.edu/iiif/2/${paintData.image_id}/full/843,/0/default.jpg`
+          }
+          width="500px"
+          height="auto"
+          alt=""
+        />
+        <div className="infos-card">
+          <h2>
+            {paintData.title === undefined || paintData.title === null
+              ? "No Title"
+              : paintData.title}
+          </h2>
+          <h4>
+            {paintData.artist_title === undefined ||
+            paintData.artist_title === null
+              ? "Unsigned"
+              : paintData.artist_title}
+          </h4>
+          <p>
+            {paintData.place_of_origin === undefined ||
+            paintData.place_of_origin === null
+              ? "No Origin"
+              : paintData.place_of_origin}
+          </p>
 
-        <p>
-          {description.value === undefined || description.value === null
-            ? "Description Unknown"
-            : description.value}
-        </p>
-        <p>
-          {medium.label === undefined || medium.label === null
-            ? "No Medium"
-            : medium.label}
-        </p>
-        <p>
-          {medium.value === undefined || medium.value === null
-            ? "No infos"
-            : medium.value}
-        </p>
-        <p>
-          {dimensions.label === undefined || dimensions.label === null
-            ? "No Dimension"
-            : dimensions.label}
-        </p>
-        <p>
-          {dimensions.value === undefined || dimensions.value === null
-            ? "No infos"
-            : dimensions.value}
-        </p>
-        <p>
-          {attribution === undefined || attribution === null
-            ? "No infos"
-            : attribution}
-        </p>
-      </div>      
-    </div>
+          <p>
+            {description.value === undefined || description.value === null
+              ? "Description Unknown"
+              : description.value}
+          </p>
+          <p>
+            {medium.label === undefined || medium.label === null
+              ? "No Medium"
+              : medium.label}
+          </p>
+          <p>
+            {medium.value === undefined || medium.value === null
+              ? "No infos"
+              : medium.value}
+          </p>
+          <p>
+            {dimensions.label === undefined || dimensions.label === null
+              ? "No Dimension"
+              : dimensions.label}
+          </p>
+          <p>
+            {dimensions.value === undefined || dimensions.value === null
+              ? "No infos"
+              : dimensions.value}
+          </p>
+          <p>
+            {attribution === undefined || attribution === null
+              ? "No infos"
+              : attribution}
+          </p>
+        </div>
+      </div>
+    
   );
 };
 export default PaintCardRandom;
