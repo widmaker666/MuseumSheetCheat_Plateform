@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "./Loader";
 
-
 const UniqueCard = () => {
   //!Constants
   const [paintData, setPaintData] = useState([]);
@@ -20,7 +19,6 @@ const UniqueCard = () => {
   const apiId = params.uid;
   const API = `https://api.artic.edu/api/v1/artworks/${apiId}`;
   const apiDescription = `https://api.artic.edu/api/v1/artworks/${apiId}/manifest.json`;
-
 
   const handleShowModal = () => {
     setShowModal(!showModal);
@@ -71,7 +69,7 @@ const UniqueCard = () => {
     <>
       <div className="paints">
         <img
-          className="art-img"
+          className="art-img m-5"
           src={
             paintData.image_id === undefined || paintData.image_id === null ? (
               <p>LOADING...</p>
@@ -81,8 +79,8 @@ const UniqueCard = () => {
           }
           alt="img"
         />
-        <div className="infos-card">
-          <h2>
+        <div className="infos-card m-5">
+          <h2 style={{ fontStyle: "italic", fontSize: "60px" }}>
             {paintData.title === undefined || paintData.title === null ? (
               <p>LOADING...</p>
             ) : (
@@ -90,34 +88,44 @@ const UniqueCard = () => {
             )}
           </h2>
           <br />
-          <h4>
+          <h4 style={{ fontSize: "30px" }}>
             {paintData.artist_title === undefined ||
             paintData.artist_title === null ? (
               <p>LOADING...</p>
             ) : (
-              paintData.artist_title
+             `- ${paintData.artist_title} -`
             )}
           </h4>
           <br />
-          <p>
+          <p style={{ fontStyle: "italic" }}>
             {paintData.place_of_origin === undefined ||
             paintData.place_of_origin === null ? (
               <p>LOADING...</p>
             ) : (
-              paintData.place_of_origin
+             `- ${paintData.place_of_origin} -`
             )}
           </p>
           <br />
+          <h2
+            style={{
+              fontStyle: "italic",
+              textDecoration: "underline red",
+              fontSize: "40px",
+            }}
+          >
+            Description
+          </h2>
           <p className="desc">
             {description.value === undefined || description.value === null ? (
               <p>LOADING...</p>
             ) : (
-
               <>
                 {description.value.length > 150 ? (
                   <>
                     {description.value.slice(0, 150)}...
-                    <button onClick={handleShowModal}>show more</button>
+                    <button className="m-5 mb-0" onClick={handleShowModal}>
+                      show more
+                    </button>
                     {showModal && (
                       <div
                         className="modal"
@@ -130,7 +138,15 @@ const UniqueCard = () => {
                           >
                             &times;
                           </span>
-                          <h2>Description</h2>
+                          <h2
+                            style={{
+                              fontStyle: "italic",
+                              textDecoration: "underline red",
+                              fontSize: "40px",
+                            }}
+                          >
+                            Description
+                          </h2>
                           <p>{description.value}</p>
                         </div>
                       </div>
@@ -143,9 +159,14 @@ const UniqueCard = () => {
             )}
           </p>
 
-
           <br />
-          <p>
+          <p
+            style={{
+              fontStyle: "italic",
+              textDecoration: "underline red",
+              fontSize: "40px",
+            }}
+          >
             {medium.label === undefined || medium.label === null ? (
               <p>LOADING...</p>
             ) : (
@@ -156,10 +177,16 @@ const UniqueCard = () => {
             {medium.value === undefined || medium.value === null ? (
               <p>LOADING...</p>
             ) : (
-              medium.value
+             ` - ${medium.value} -`
             )}
           </p>
-          <p>
+          <p
+            style={{
+              fontStyle: "italic",
+              textDecoration: "underline red",
+              fontSize: "40px",
+            }}
+          >
             {dimensions.label === undefined || dimensions.label === null ? (
               <p>LOADING...</p>
             ) : (

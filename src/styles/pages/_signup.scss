@@ -8,6 +8,7 @@
     right: 95%;
     // transform: translate(-50%, 0);
     border: solid #000000 1px;
+   
 
 }
 
@@ -78,6 +79,7 @@
 .signupForm button{
     width: 100px;
     font-family: 'Italiana', serif;
+    font-weight: 800;
     display: flex;
     justify-content: center;
     margin-top: 0px;
@@ -86,18 +88,20 @@
 
 .signupForm button:hover{
     color: #ffffff;
-    background-color: #000000;
+    background-color: #000000;   
 }
 
 .btn{
     display: flex;
     justify-content: center;
+    font-weight: 800;
     
 }
 
 .signupForm p{
     margin-bottom: 0px;
     font-family: 'Italiana', serif;
+    font-weight: 800;
 }
 
 .signupForm h2{
@@ -106,10 +110,11 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    font-weight: 800;
 }
 
 .signupForm input{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .signupForm {
