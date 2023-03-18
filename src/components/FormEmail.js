@@ -83,7 +83,7 @@ const FormEmail = () => {
                 </button>
               </div>
             </form>
-            <div className="text-center mt-5" style={{ color: "green" }}></div>
+            <p className="form-message text-center mt-5" style={{ fontFamily: "Inconsolate", fontSize: "30px", fontWeight: 800, color: "green" }}></p>
             <div className="mb-5 d-grid text-center">
               <TypeWriterEffect
                 textStyle={{
