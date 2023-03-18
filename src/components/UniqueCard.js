@@ -88,7 +88,7 @@ const UniqueCard = () => {
             )}
           </h2>
           <br />
-          <h4 style={{ fontSize: "30px" }}>
+          <h4 style={{ fontSize: "25px" }}>
             {paintData.artist_title === undefined ||
             paintData.artist_title === null ? (
               <p>LOADING...</p>
@@ -110,12 +110,12 @@ const UniqueCard = () => {
             style={{
               fontStyle: "italic",
               textDecoration: "underline red",
-              fontSize: "40px",
+              fontSize: "30px",
             }}
           >
             Description
           </h2>
-          <p className="desc">
+          <p className="desc mb-0 p-1" style={{ fontStyle: "italic", fontSize: "20px" }}>
             {description.value === undefined || description.value === null ? (
               <p>LOADING...</p>
             ) : (
@@ -123,7 +123,7 @@ const UniqueCard = () => {
                 {description.value.length > 150 ? (
                   <>
                     {description.value.slice(0, 150)}...
-                    <button className="m-5 mb-0" onClick={handleShowModal}>
+                    <button className="" onClick={handleShowModal}>
                       show more
                     </button>
                     {showModal && (
@@ -147,24 +147,24 @@ const UniqueCard = () => {
                           >
                             Description
                           </h2>
-                          <p>{description.value}</p>
+                          <p style={{ fontStyle: "italic", fontSize: "20px" }}>{description.value}</p>
                         </div>
                       </div>
                     )}
                   </>
                 ) : (
-                  description.value
+                  <p >{description.value}</p>
                 )}
               </>
             )}
           </p>
 
           <br />
-          <p
+          <p className="mb-0 p-1"
             style={{
               fontStyle: "italic",
               textDecoration: "underline red",
-              fontSize: "40px",
+              fontSize: "30px",
             }}
           >
             {medium.label === undefined || medium.label === null ? (
