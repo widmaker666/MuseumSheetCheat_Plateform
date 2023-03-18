@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 const Contact = () => {
   return (
     <>
-      <div>
+      <div className="body-back">
         <Navbar />
         <br />
         <br />
@@ -15,10 +15,8 @@ const Contact = () => {
         <br />
         <br />
         <FormEmail />
-      </div>
-      <div>
-        <Footer />
-      </div>
+        <Footer />      
+      </div>      
     </>
   );
 };

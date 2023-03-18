@@ -14,29 +14,26 @@ import SignUp from "./pages/SignUp";
 import SinglePaint from "./pages/SinglePaint";
 import Welcome from "./pages/Welcome";
 
-function App() { 
-
-  return ( 
-    <AuthProvider>           
-      <div className="app">   
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Welcome />} />
-            <Route path="/discover" element={<Discover />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-          <Route element={<PrivateRoutes/>}>
+function App() {
+  return (
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route element={<PrivateRoutes />}>
             <Route path="/random" element={<Random />} />,
-            <Route exact path="/home" element={<Home />} />,
+            <Route path="/home" element={<Home />} />,
             <Route path="/contact" element={<Contact />} />,
             <Route path="/about" element={<About />} />,
             <Route path="/one-paint/:uid" element={<SinglePaint />} />
           </Route>
-            <Route path="/rgpd" element={<Rgpd />} />
-            <Route path="*" element={<Error404 />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+          <Route path="/rgpd" element={<Rgpd />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </BrowserRouter>
     </AuthProvider>
   );
 }

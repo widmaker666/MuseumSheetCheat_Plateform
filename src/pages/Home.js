@@ -54,7 +54,7 @@ function Home() {
         <h5 className="justify-content-center">
         <TypeWriterEffect className="text-align-center"
         textStyle={{
-          fontFamily: "Roboto",
+          fontFamily: "Inconsolata",
           color: 'white',
           fontWeight: 500,
           fontSize: '1.5em',

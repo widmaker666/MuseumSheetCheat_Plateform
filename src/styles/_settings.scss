@@ -7,8 +7,8 @@
   
   $color-1: #61dafb;
   $color-2: salmon;
-  $color-3: #282c34;
-  $white: rgb(243, 243, 243);
+  $color-3: #282c34;  
+    $white: rgb(243, 243, 243);
   
   @mixin verticalCenter {
     display: flex;
@@ -25,7 +25,7 @@
   body {
     background: $color-3;
     font-family: $font-1;
-    color: $white;
+    color: rgb(233, 230, 230) !important;
     // @include verticalCenter;
   }
   .logo{
