@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import TypeWriterEffect from "react-typewriter-effect";
+import jesus from "../assets/images/jesus.jpg";
 
 const FormEmail = () => {
   const form = useRef();
@@ -37,56 +39,75 @@ const FormEmail = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="mb-5">CONTACT US</h2>
-      <form ref={form} onSubmit={sendEmail}>
-        <div className="mb-3">
-          <label className="form-label">Name</label>
-          <input
-            className="form-control"
-            type="text"
-            name="name"
-            required
-            autoComplete="off"
-          />
-        </div>
+    <body className="body-back">
+      <div className="container mt-5">
+        <h2 className=" mb-4 parag-fonts offset-lg-3 ">CONTACT US</h2>
+        <div className="row">
+          <div className="col-lg-6 offset-lg-1">
+            <form ref={form} onSubmit={sendEmail}>
+              <div className="mb-3 d-grid">
+                <label className="parag-fonts text-center">Name</label>
+                <input
+                  className="signupForm"
+                  type="text"
+                  name="name"
+                  required
+                  autoComplete="off"
+                />
+              </div>
 
-        <div className="mb-3">
-          <label className="form-label">Email</label>
-          <input
-            className="form-control"
-            type="email"
-            name="email"
-            required
-            autoComplete="off"
-          />
-        </div>
+              <div className="mb-3 d-grid text-center">
+                <label className="parag-fonts">Email</label>
+                <input
+                  className="signupForm"
+                  type="email"
+                  name="email"
+                  required
+                  autoComplete="off"
+                />
+              </div>
 
-        <div className="mb-3">
-          <label className="form-label">Message</label>
-          <textarea
-            className="form-control"
-            name="message"
-            required
-            autoComplete="off"
-          />
-        </div>
+              <div className="mb-2 d-grid text-center">
+                <label className="parag-fonts">Message</label>
+                <textarea
+                  className="signupForm"
+                  name="message"
+                  required
+                  autoComplete="off"
+                />
+              </div>
 
-        <div className="mb-5">
-          <input className="btn btn-danger" type="submit" value="Envoyer" />
+              <div className="btn-lt d-grid">
+                <button type="submit" className="">
+                  Envoyer
+                </button>
+              </div>
+            </form>
+            <div className="text-center mt-5" style={{ color: "green" }}></div>
+            <div className="mb-5 d-grid text-center">
+              <TypeWriterEffect
+                textStyle={{
+                  fontFamily: "Inconsolata",
+                  color: "white",
+                  fontWeight: 500,
+                  fontSize: "1.5em",
+                  text: "center",
+                }}
+                startDelay={100}
+                cursorColor="black"
+                text=" Here is the contact form you can use for all your requests,
+                appreciations for all your requests, appreciations and comments.
+                Moreover, if you wish to delete, modify or deactivate your
+                deactivate your account we will also ask you to go through
+                through this one."
+                typeSpeed={100}
+              />
+            </div>
+          </div>
+            <img className="col-5 img-contact" src={jesus} alt="" />
         </div>
-      </form>
-      <div className="form-message mb-3" style={{ color: "green" }}></div>
-      <div className="mb-5">
-        <p>
-          Ici c'est le formulaire de contact vous pouvez vous servir de celui-çi
-          pour toutes vos requêtes, appreciations et observations. De plus si
-          vous souhaitez supprimez, modifier ou désactiver votre compte nous
-          vous demanderons également de passer par celui-ci. <br />
-          Merci!
-        </p>
       </div>
-    </div>
+    </body>
   );
 };
 

@@ -4,19 +4,19 @@ import { AuthContext } from "../context/AuthProvider";
 
 const PrivateRoutes = () => {
   const { currentUser } = useContext(AuthContext);
+  console.log(currentUser);
 
   if (
     currentUser == null ||
-    currentUser.accessToken === "" ||
-    currentUser.accessToken === null ||
-    currentUser.accessToken === undefined
-  ) {
-    /* let auth = { token: false }; */
-    return <Navigate to="/login" />;
-  } else {
-    /*  let auth = { token: true }; */
-    return <Outlet />;
-  }
+    currentUser.uid === "" ||
+    currentUser.uid === null ||
+    currentUser.uid === undefined
+  ) {     
+    return  <Navigate to="/login" />;
+  } else{
+      return  currentUser === currentUser ||
+      currentUser.uid === currentUser.uid ? <Outlet /> : <Navigate to="/login" />;
+    }
 };
 
 export default PrivateRoutes;
