@@ -81,7 +81,7 @@ function Home() {
                 fontSize: "1.8em",
                 fontStyle: "italic",
               }}
-              startDelay={2000}
+              startDelay={200}
               cursorColor="#3F3D56"
               multiText={[
                 "The only real in the art, it is the art",
