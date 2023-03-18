@@ -5,8 +5,10 @@ import Navbar from "../components/Navbar";
 
 const About = () => {
   return (
+    <>
     <div className="abouut">
       <br />
+      <Navbar />
       <br />
       <br />
       <br />
@@ -123,9 +125,9 @@ const About = () => {
           />
         </div>
       </div>
-
       <Footer />
     </div>
+    </>
   );
 };
 

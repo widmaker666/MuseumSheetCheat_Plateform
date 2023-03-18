@@ -13,11 +13,8 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
-  const [validation, setValidation] = useState("");
-  const [validationPassword, setValidationPassword] = useState("");
   const [checked, setChecked] = useState(false);
   const [isPasswordFocused, setIsPasswordFocused] = useState(false);
-  const [rgpd, setRgpd] = useState("");
   const navigate = useNavigate();
 
   //!Const Validations
@@ -48,14 +45,11 @@ const SignUp = () => {
       !/[0-9]/.test(password) ||
       !/[^a-zA-Z0-9]/.test(password)
     ) {
-      setValidationPassword("Password need to be more secured");
-      return;
+      return alert("password need to be more secured");
     } else if (password !== repeatPassword) {
-      setValidation("Passwords must be the same");
-      return;
+      return alert("Passwords must be the same");
     } else if (checked === false) {
-      setRgpd("You must check the conditions");
-      return;
+      return alert("You must check the conditions");
     }
 
     function onRegister() {
@@ -107,7 +101,6 @@ const SignUp = () => {
                 required
                 type="password"
               ></input>
-              <p className="text-danger-1">{validationPassword}</p>
               {isPasswordFocused && (
                 <div className="valid">
                   <ul>
@@ -151,7 +144,7 @@ const SignUp = () => {
                 type="password"
                 onChange={(e) => setRepeatPassword(e.target.value)}
               />
-              <p className="text-danger-2">{validation}</p>
+
               <label>
                 <input
                   type="checkbox"
@@ -161,7 +154,6 @@ const SignUp = () => {
                 />
                 I agree to the terms and conditions RGPD
               </label>
-              <p>{rgpd}</p>
               <div className="btn">
                 <button>Sign Up</button>
               </div>
