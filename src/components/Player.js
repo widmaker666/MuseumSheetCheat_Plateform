@@ -11,7 +11,7 @@ const Player = () => {
         }
       
         return (
-          <button style={{border: "none", outline: "none"}} className="btn-light bg-white" onClick={() => handleClick()}>
+          <button style={{border: "none", outline: "none", fontSize: "15px"}} className="btn" onClick={() => handleClick()}>
              Museum Ambient
           </button>
         )

@@ -38,7 +38,7 @@ const PaintCard = () => {
       {loading ? (
         <Loader />
       ) : (
-        <ul>
+        <ul className="margin-card">
           {paintData &&
             paintData
               .filter(

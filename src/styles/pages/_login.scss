@@ -49,26 +49,31 @@
 .loginForm button{
     width: 100px;
     font-family: 'Italiana', serif;
+    font-weight: 800;
     display: flex;
     justify-content: center;
     margin-top: 20px;
     background-color: #ffffff;
+
 }
 
 .loginForm button:hover{
     color: #ffffff;
     background-color: #000000;
+    
 }
 
 .btn{
-    display: flex;
+    display: flex;    
     justify-content: center;
+   
     
 }
 
 .loginForm p{
     margin-bottom: 0px;
     font-family: 'Italiana', serif;
+    font-weight: 800;
 }
 
 .loginForm h2{
@@ -77,6 +82,7 @@
     margin-bottom: 70px;
     display: flex;
     justify-content: center;
+    font-weight: 800;
 }
 
 .loginForm input{

@@ -25,11 +25,11 @@ const Card = ({ paint }) => {
 
       <div className="infos">
         <h2>{paint.title == null ? "No Title" : paint.title}</h2>
-        <h4>{paint.artist_title == null ? "Unsigned" : paint.artist_title}</h4>
-        <p>
+        <h2>{paint.artist_title == null ? "Unsigned" : paint.artist_title}</h2>
+        <h2>
           {paint.place_of_origin == null ? "No origin" : paint.place_of_origin}
-        </p>
-        <button onClick={handleClick}>more {paint.id}</button>
+        </h2>
+        <button  onClick={handleClick}> MORE {paint.id}</button>
       </div>
     </li>
   );

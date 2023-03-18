@@ -7,10 +7,11 @@
     position:absolute;
     padding:0;
     margin:0;
-    background-color: rgb(92, 149, 184);
-    background: linear-gradient(90deg, rgb(20, 18, 66) 0%,rgb(44, 44, 145) 35%,rgb(66, 152, 169)) 100%;
-    width: auto;
+    background-color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgb(54, 19, 54) 0%,rgb(145, 47, 112) 35%,rgb(223, 246, 247)) 100%;
+    width: 100%;
     height: auto;
+    overflow-y: hidden;
     // background-position: right top;
     // background-attachment: scroll;
 }
@@ -62,13 +63,12 @@
     max-width: 40%;
     float: left;
     margin-left: 80px;
+    border: 10px solid black;
 }
 
 .infos-card{
     float: right;
-    width: 50%;
-    
-    
+    width: 45%;   
     color: black;
 }
 
@@ -76,13 +76,16 @@
     // margin-top: 50px;
     font-size: 2.5rem;
     font-family: 'Italiana', serif;
+    font-weight: 800;
 }
 .infos-card h4{
     font-family: 'Italiana', serif;
+    font-weight: 800;
 }
 
 .infos-card p{
     font-size: 1.3rem;
+    font-weight: 800;
 }
 
 .desc{

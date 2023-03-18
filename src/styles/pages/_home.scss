@@ -2,11 +2,17 @@
 //     background-color: rgb(212, 161, 98);
 // }
 
-.home{
-    position:relative;
-    padding:0;
-    margin:0;
-    background-color: rgb(212, 161, 98);
-    width: 100%;
-    height: 100%;
+.home {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(157, 166, 204);
+  width: 100%;
+  height: auto;
 }
+
+.text-anime {
+    display: flex;
+    justify-content: center;
+}
+
