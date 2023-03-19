@@ -15,9 +15,11 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     function onRegister() {
-      signInWithEmailAndPassword(auth, email, password).catch((error) =>
-        console.log(error)
-      );
+      signInWithEmailAndPassword(auth, email, password).catch((error) => {
+        navigate("/login");
+        alert("Password or Login Failed");
+        console.log(error);
+      });
       navigate("/home");
     }
     onRegister();
