@@ -57,16 +57,16 @@
 
 
 .art-img{
+    max-width: 22%;
     max-height: auto;
-    max-width: 28%;
-    float: left;
-    margin-left: 80px;
+    float: left;    
     border: 10px solid black;
 }
 
 .infos-card{
     float: right;
-    width: 55%;   
+    max-width: 55%;
+    max-height: auto;      
     color: black;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .infos-card p{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 800;
 }
 

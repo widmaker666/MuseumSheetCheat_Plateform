@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "./Loader";
+import alien from '../assets/images/alien.png'
 
 const UniqueCard = () => {
   //!Constants
@@ -71,8 +72,8 @@ const UniqueCard = () => {
         <img
           className="art-img m-5"
           src={
-            paintData.image_id === undefined || paintData.image_id === null ? (
-              <p>LOADING...</p>
+            paintData.image_id == null || paintData.image_id == "" ? (
+              {alien}
             ) : (
               `https://www.artic.edu/iiif/2/${paintData.image_id}/full/843,/0/default.jpg`
             )
@@ -80,27 +81,25 @@ const UniqueCard = () => {
           alt="img"
         />
         <div className="infos-card m-5">
-          <h2 style={{ fontStyle: "italic", fontSize: "60px" }}>
-            {paintData.title === undefined || paintData.title === null ? (
-              <p>LOADING...</p>
+          <h2 style={{ fontStyle: "italic", fontSize: "35px", fontWeight: 900 }}>
+            {paintData.title == null || paintData.title == "" ? (
+              <p>No Title</p>
             ) : (
               paintData.title
             )}
           </h2>
           <br />
           <h4 style={{ fontSize: "25px" }}>
-            {paintData.artist_title === undefined ||
-            paintData.artist_title === null ? (
-              <p>LOADING...</p>
+            {paintData.artist_title == null || paintData.artist_title == "" ? (
+              <p>Unsigned</p>
             ) : (
              `- ${paintData.artist_title} -`
             )}
           </h4>
           <br />
           <p style={{ fontStyle: "italic" }}>
-            {paintData.place_of_origin === undefined ||
-            paintData.place_of_origin === null ? (
-              <p>LOADING...</p>
+            {paintData.place_of_origin == null || paintData.place_of_origin == "" ? (
+              <p>No Origin</p>
             ) : (
              `- ${paintData.place_of_origin} -`
             )}
@@ -116,13 +115,13 @@ const UniqueCard = () => {
             Description
           </h2>
           <p className="desc mb-0 p-1" style={{ fontStyle: "italic", fontSize: "20px" }}>
-            {description.value === undefined || description.value === null ? (
-              <p>LOADING...</p>
+            {description.value == null || description.value == "" ? (
+              <p>No description</p>
             ) : (
               <>
-                {description.value.length > 150 ? (
+                {description.value.length > 70 ? (
                   <>
-                    {description.value.slice(0, 150)}...
+                    {description.value.slice(0, 70)}...
                     <button className="" onClick={handleShowModal}>
                       show more
                     </button>
@@ -153,7 +152,7 @@ const UniqueCard = () => {
                     )}
                   </>
                 ) : (
-                  <p >{description.value}</p>
+                  <p>{description.value}</p>
                 )}
               </>
             )}
@@ -167,42 +166,43 @@ const UniqueCard = () => {
               fontSize: "30px",
             }}
           >
-            {medium.label === undefined || medium.label === null ? (
-              <p>LOADING...</p>
+            {medium.label == null || medium.label == "" ? (
+              <p>No Medium</p>
             ) : (
               medium.label
             )}
           </p>
           <p>
-            {medium.value === undefined || medium.value === null ? (
-              <p>LOADING...</p>
+            {medium.value == null || medium.value == "" ? (
+              <p>No infos</p>
             ) : (
              ` - ${medium.value} -`
             )}
           </p>
+          <br />
           <p
             style={{
               fontStyle: "italic",
               textDecoration: "underline red",
-              fontSize: "40px",
+              fontSize: "30px",
             }}
           >
-            {dimensions.label === undefined || dimensions.label === null ? (
-              <p>LOADING...</p>
+            {dimensions.label == null || dimensions.label == "" ? (
+              <p>No Dimension</p>
             ) : (
               dimensions.label
             )}
           </p>
           <p>
-            {dimensions.value === undefined || dimensions.value === null ? (
-              <p>LOADING...</p>
+            {dimensions.value == null || dimensions.value == "" ? (
+              <p>No infos</p>
             ) : (
               dimensions.value
             )}
           </p>
           <p>
-            {attribution === undefined || attribution === null ? (
-              <p>LOADING...</p>
+            {attribution == null || attribution == "" ? (
+              <p>No infos</p>
             ) : (
               attribution
             )}
