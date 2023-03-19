@@ -28,7 +28,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />,
           <Route path="/about" element={<About />} />,
           <Route path="/one-paint/:uid" element={<SinglePaint />} />
-          <Route path="/rgpd" element={<Rgpd />} />
+          <Route path="/privacy" element={<Rgpd />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
