@@ -23,13 +23,11 @@ function App() {
           <Route path="/discover" element={<Discover />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route element={<PrivateRoutes />}>
-            <Route path="/random" element={<Random />} />,
-            <Route path="/home" element={<Home />} />,
-            <Route path="/contact" element={<Contact />} />,
-            <Route path="/about" element={<About />} />,
-            <Route path="/one-paint/:uid" element={<SinglePaint />} />
-          </Route>
+          <Route path="/random" element={<Random />} />,
+          <Route path="/home" element={<Home />} />,
+          <Route path="/contact" element={<Contact />} />,
+          <Route path="/about" element={<About />} />,
+          <Route path="/one-paint/:uid" element={<SinglePaint />} />
           <Route path="/rgpd" element={<Rgpd />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

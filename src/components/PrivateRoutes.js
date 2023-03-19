@@ -8,15 +8,19 @@ const PrivateRoutes = () => {
 
   if (
     currentUser == null ||
-    currentUser.uid === "" ||
-    currentUser.uid === null ||
-    currentUser.uid === undefined
-  ) {     
-    return  <Navigate to="/login" />;
-  } else{
-      return  currentUser === currentUser ||
-      currentUser.uid === currentUser.uid ? <Outlet /> : <Navigate to="/login" />;
-    }
+    currentUser.accessToken === "" ||
+    currentUser.accessToken === null ||
+    currentUser.accessToken === undefined
+  ) {
+    return <Navigate to="/login" />;
+  } else {
+    return currentUser === currentUser ||
+      currentUser.accessToken === currentUser.accessToken ? (
+      <Outlet />
+    ) : (
+      <Navigate to="/login" />
+    );
+  }
 };
 
 export default PrivateRoutes;
