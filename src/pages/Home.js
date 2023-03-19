@@ -50,7 +50,7 @@ function Home() {
         
         <div>        
           <h3
-            className="mt-5 pt-5"
+            className="mt-5 pt-5 text-center"
             style={{
               fontFamily: "Italiana",
               fontSize: "3.5em",

@@ -18,7 +18,6 @@ const SinglePaint = () => {
       </div>
 
       {/* <Footer /> */}
-
     </>
   );
 };
