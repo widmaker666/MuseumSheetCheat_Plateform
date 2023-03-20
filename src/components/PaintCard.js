@@ -30,10 +30,11 @@ const PaintCard = () => {
           type="range"
           min="1"
           max="100"
+          style={{color: "black"}}
           defaultValue={rangeValue}
           onChange={(e) => setRangeValue(e.target.value)}
         />
-        <span className="m-3">{rangeValue}</span>
+        <span className="m-2" style={{color: "black"}}>{rangeValue}</span>
       </div>
       {loading ? (
         <Loader />
