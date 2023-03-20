@@ -7,7 +7,8 @@ const Loader = () => {
       <img
         className="d-block mx-auto"
         src={loader}
-        width="700px"
+        width="50%"
+        height="auto"
         alt="loader"
       />
     </div>

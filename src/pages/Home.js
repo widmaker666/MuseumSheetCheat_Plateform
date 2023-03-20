@@ -89,7 +89,7 @@ function Home() {
                 "Art is the shortest way from man to man",
                 "True art is not only the expression of a feeling, but also the result of a sharp intelligence",
                 "The work of art is not the reflection, the image of the world; but it is the image of the world",
-                "Enjoy your visit to the Museum Sheet Cheat website",
+                "Enjoy your visit at the Museum Sheet Cheat website",
               ]}
               multiTextDelay={2000}
               typeSpeed={100}
