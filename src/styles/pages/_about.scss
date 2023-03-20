@@ -1,5 +1,6 @@
 .about{
-  background: rgb(31, 29, 29)
+  background: url("../../assets/images/marbre.jpg");
+  color: black;
 }
 
 .type{
@@ -14,9 +15,10 @@
   padding: 2%;
   font-family: "Inconsolata";
   font-weight: 500;
-  font-size: 150%;
-
-  background-color: rgb(36, 126, 72);
+  font-size: 200%;
+  background-color: rgb(234, 234, 234, 0.2);
+  border: 2px solid goldenrod;
+  border-bottom-width: 0ex;
 
 }
 
