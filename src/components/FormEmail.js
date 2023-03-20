@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import TypeWriterEffect from "react-typewriter-effect";
 import jesus from "../assets/images/jesus.jpg";
+import dali from "../assets/images/dali2.jpg";
 
 const FormEmail = () => {
   const form = useRef();
@@ -41,7 +42,7 @@ const FormEmail = () => {
   return (
     <body className="body-back">
       <div className="container mt-5">
-        <h2 className=" mb-4 parag-fonts offset-lg-3 ">CONTACT US</h2>
+        <h2 className=" mb-4 parag-fonts offset-lg-3">CONTACT US</h2>
         <div className="row">
           <div className="col-lg-6 offset-lg-1">
             <form ref={form} onSubmit={sendEmail}>
@@ -83,12 +84,20 @@ const FormEmail = () => {
                 </button>
               </div>
             </form>
-            <p className="form-message text-center mt-5" style={{ fontFamily: "Inconsolate", fontSize: "30px", fontWeight: 800, color: "green" }}></p>
+            <p
+              className="form-message text-center mt-5"
+              style={{
+                fontFamily: "Inconsolate",
+                fontSize: "30px",
+                fontWeight: 800,
+                color: "green",
+              }}
+            ></p>
             <div className="mb-5 d-grid text-center">
               <TypeWriterEffect
                 textStyle={{
                   fontFamily: "Inconsolata",
-                  color: "white",
+                  color: "black",
                   fontWeight: 500,
                   fontSize: "1.5em",
                   text: "center",
@@ -102,11 +111,11 @@ const FormEmail = () => {
                 deactivate your account we will also ask you to go through
                 through this one."
                 typeSpeed={50}
-                
               />
             </div>
           </div>
-            <img className="col-5 img-contact" src={jesus} alt="" />
+          <img className="col-5 img-contact" src={jesus} alt="" />
+          <img className="img-contact-responsive" src={dali} alt="" />
         </div>
       </div>
     </body>
