@@ -14,7 +14,7 @@ const Card = ({ paint }) => {
 
   return (
     <li className="card" target="_blank">
-      <img
+      <img className="img"
         src={
           paint.image_id == null
             ? Alien
