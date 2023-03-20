@@ -64,7 +64,7 @@ function Home() {
               paddingBottom: "2%",
             }}
           >
-            Bienvenue sur Museum Sheet Cheat
+            Welcome on the Museum Sheet Cheat site
           </h3>
           <div className="btn-lt">
           <button onClick={clickLogin}>
@@ -95,7 +95,7 @@ function Home() {
                 "Art is the shortest way from man to man",
                 "True art is not only the expression of a feeling, but also the result of a sharp intelligence",
                 "The work of art is not the reflection, the image of the world; but it is the image of the world",
-                "Enjoy your visit at the Museum Sheet Cheat website",
+                "Enjoy your visit on the Museum Sheet Cheat website",
               ]}
               multiTextDelay={2000}
               typeSpeed={100}

@@ -81,7 +81,7 @@ const UniqueCard = () => {
           alt="img"
         />
         <div className="infos-card m-5">
-          <h2 style={{ fontStyle: "italic", fontSize: "35px", fontWeight: 900 }}>
+          <h2  style={{ fontStyle: "italic", fontWeight: 900 }}>
             {paintData.title == null || paintData.title == "" ? (
               <p>No Title</p>
             ) : (
@@ -89,7 +89,7 @@ const UniqueCard = () => {
             )}
           </h2>
           <br />
-          <h4 style={{ fontSize: "25px" }}>
+          <h4>
             {paintData.artist_title == null || paintData.artist_title == "" ? (
               <p>Unsigned</p>
             ) : (
@@ -108,8 +108,8 @@ const UniqueCard = () => {
           <h2
             style={{
               fontStyle: "italic",
-              textDecoration: "underline red",
-              fontSize: "30px",
+              textDecoration: "underline red",              
+              fontFamily: "Italiana"
             }}
           >
             Description
@@ -121,9 +121,9 @@ const UniqueCard = () => {
               <>
                 {description.value.length > 70 ? (
                   <>
-                    {description.value.slice(0, 70)}...
-                    <button className="" onClick={handleShowModal}>
-                      show more
+                    <p>{description.value.slice(0, 70)}...</p>
+                    <button className="btn-show" onClick={handleShowModal}>
+                      show
                     </button>
                     {showModal && (
                       <div
@@ -159,7 +159,7 @@ const UniqueCard = () => {
           </p>
 
           <br />
-          <p className="mb-0 p-1"
+          <p className="mb-0 p-1 "
             style={{
               fontStyle: "italic",
               textDecoration: "underline red",
@@ -169,7 +169,7 @@ const UniqueCard = () => {
             {medium.label == null || medium.label == "" ? (
               <p>No Medium</p>
             ) : (
-              medium.label
+             <h2>{medium.label}</h2> 
             )}
           </p>
           <p>
@@ -190,7 +190,7 @@ const UniqueCard = () => {
             {dimensions.label == null || dimensions.label == "" ? (
               <p>No Dimension</p>
             ) : (
-              dimensions.label
+             <h2>{dimensions.label}</h2> 
             )}
           </p>
           <p>
