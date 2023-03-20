@@ -7,7 +7,7 @@ const PaintCardRandom = () => {
   //!Constants
   //*Réécrire toute les variables à la main ! car bug d'affichage
   const [paintData, setPaintData] = useState([]);
-  const [description, setDescription] = useState({});
+  const [descriptionData, setDescriptionData] = useState({});
   const [medium, setMedium] = useState({});
   const [dimensions, setDimensions] = useState({});
   const [attribution, setAttribution] = useState("");
@@ -40,28 +40,28 @@ const PaintCardRandom = () => {
     axios
       .get(apiDescription)
       .then((res) => res.data)
-      .then((data) => setDescription(data.description[0]));
-  }, []);
+      .then((data) => setDescriptionData(data.description[0]));
+  }, [descriptionData]);
 
   useEffect(() => {
     axios
       .get(apiDescription)
       .then((res) => res.data)
       .then((data) => setMedium(data.metadata[1]));
-  }, []);
+  }, [descriptionData]);
 
   useEffect(() => {
     axios
       .get(apiDescription)
       .then((res) => res.data)
       .then((data) => setDimensions(data.metadata[2]));
-  }, []);
+  }, [descriptionData]);
   useEffect(() => {
     axios
       .get(apiDescription)
       .then((res) => res.data)
       .then((data) => setAttribution(data.attribution));
-  }, []);
+  }, [descriptionData]);
 
   return loading ? (
     <Loader />
@@ -116,13 +116,13 @@ const PaintCardRandom = () => {
             className="desc mb-0 p-1"
             style={{ fontStyle: "italic", fontSize: "20px" }}
           >
-            {description.value == null || description.value == "" ? (
+            {descriptionData.value == null || descriptionData.value == "" ? (
               <p>NO description</p>
             ) : (
               <>
-                {description.value.length > 70 ? (
+                {descriptionData.value.length > 70 ? (
                   <>
-                    {description.value.slice(0, 70)}...
+                    {descriptionData.value.slice(0, 70)}...
                     <button className="" onClick={handleShowModal}>
                       show more
                     </button>
@@ -148,14 +148,14 @@ const PaintCardRandom = () => {
                             Description
                           </h2>
                           <p style={{ fontStyle: "italic", fontSize: "20px" }}>
-                            {description.value}
+                            {descriptionData.value}
                           </p>
                         </div>
                       </div>
                     )}
                   </>
                 ) : (
-                  <p>{console.log(description.value)}</p>
+                  <p>{descriptionData.value}</p>
                 )}
               </>
             )}
