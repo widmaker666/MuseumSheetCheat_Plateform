@@ -3,7 +3,6 @@
 }
 
 .type{
-  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -22,29 +21,85 @@
 }
 
 .title {
+  margin-left: 3%;
   max-width: 50%;
   text-align: center;
-  justify-content: center;  
+  justify-content: center;
   font-family: "Inconsolata";
   font-weight: 500;
   font-size: 150%;
-
+}
+.title2 {
+  width: 50%;
+  clear: both;
+  margin-right: 3%;
+  text-align: center;
+  float: right;
+  font-family: "Inconsolata";
+  font-weight: 500;
+  font-size: 150%;
 }
 
 .img-container {
   position: absolute;
-  right: 10%;
+  left: 60%;
 
   img {
-    width: 400px;    
-    height: 400px;
+    width: 80%;
+    height: auto;
+    border: 10px solid black;
+
   }
 }
+.img-container2 {
+  position: absolute;
+  right: 60%;
+  margin-top: 10%;
+  margin-left: 10%;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 10px solid black;
+  }
+}
+
 .content{
+  margin-left: 3%;
   justify-content: left;
   text-align: center;
   padding-top: 5%;
   width: 50%;
   font-family: "Inconsolata";
   font-size: 1.3em;
+}
+
+.content2{
+  margin-right: 3%;
+  clear: both;
+  justify-content: right;
+  text-align: center;
+  float: right;
+  padding-top: 5%;
+  width: 50%;
+  font-family: "Inconsolata";
+  font-size: 1.3em;
+}
+
+@media screen and (max-width:1100px){
+  .img-container2 {
+  position: absolute;
+  right: 60%;
+  margin-top: 40%;
+  margin-left: 10%;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 10px solid black;
+  }
+}
+
 }
