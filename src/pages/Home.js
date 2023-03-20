@@ -48,14 +48,20 @@ function Home() {
           <Navbar />          
         </div>
         
-        <div>        
+        <div className="pt-5">        
           <h3
-            className="mt-5 pt-5 text-center"
+            className="mt-5 pt-0 text-center "
             style={{
               fontFamily: "Italiana",
               fontSize: "3.5em",
               fontWeight: 1000,
               color: "black",
+              border: "3px solid goldenrod",
+              borderBottomWidth: 0,
+              marginLeft: "20%",
+              marginRight: "20%",
+              marginBottom: "5%",
+              paddingBottom: "2%",
             }}
           >
             Bienvenue sur Museum Sheet Cheat
