@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 const About = () => {
   return (
     <>
-    <div className="abouut">
+    <div className="about">
       <br />
       <Navbar />
       <br />
@@ -28,6 +28,7 @@ const About = () => {
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpjGTiyHAwMmvTFjtuL-jBwbNSVEdhr03m_A&usqp=CAU"
             alt="art abstrait"
+            
           />
         </div>
       </div>
@@ -41,11 +42,7 @@ const About = () => {
             city's early history to contemporary art and culture.
           </p>
         </div>
-        <div className="img-container ">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpjGTiyHAwMmvTFjtuL-jBwbNSVEdhr03m_A&usqp=CAU"
-            alt="art abstrait"
-          />
+        <div className="img-container ">         
         </div>
       </div>
       <div className="type">
@@ -58,10 +55,7 @@ const About = () => {
           </p>
         </div>
         <div className="img-container ">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpjGTiyHAwMmvTFjtuL-jBwbNSVEdhr03m_A&usqp=CAU"
-            alt="art abstrait"
-          />
+          
         </div>
       </div>
       <div className="Btitle">History and Exhibit</div>
@@ -76,10 +70,7 @@ const About = () => {
           </p>
         </div>
         <div className="img-container ">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpjGTiyHAwMmvTFjtuL-jBwbNSVEdhr03m_A&usqp=CAU"
-            alt="art abstrait"
-          />
+        
         </div>
       </div>
       <div className="type">
@@ -93,13 +84,10 @@ const About = () => {
           </p>
         </div>
         <div className="img-container ">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpjGTiyHAwMmvTFjtuL-jBwbNSVEdhr03m_A&usqp=CAU"
-            alt="art abstrait"
-          />
+          
         </div>
       </div>
-      <div className="type">
+      
         <div className="title">Exhibit</div>
         <div className="content">
           <p>
@@ -117,12 +105,9 @@ const About = () => {
             Our exhibits are designed to be engaging and interactive, with
             plenty of opportunities for visitors to learn and explore.
           </p>
-        </div>
+        
         <div className="img-container ">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpjGTiyHAwMmvTFjtuL-jBwbNSVEdhr03m_A&usqp=CAU"
-            alt="art abstrait"
-          />
+         
         </div>
       </div>
       <Footer />

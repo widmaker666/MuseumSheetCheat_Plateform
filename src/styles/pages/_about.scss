@@ -1,33 +1,50 @@
+.about{
+  background: rgb(31, 29, 29)
+}
+
+.type{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
 .Btitle {
   text-align: center;
   justify-content: center;
-  font-size: 140px;
-  background-color: black;
+  margin: 8%;
+  padding: 2%;
+  font-family: "Inconsolata";
+  font-weight: 500;
+  font-size: 150%;
+
+  background-color: rgb(36, 126, 72);
+
 }
 
 .title {
   max-width: 50%;
   text-align: center;
-  justify-content: center;
-  font-size: 100px;
+  justify-content: center;  
+  font-family: "Inconsolata";
+  font-weight: 500;
+  font-size: 150%;
 
 }
 
 .img-container {
-  position: relative;
-  left: 1200px;
-  bottom: 300px;
+  position: absolute;
+  right: 10%;
 
   img {
+    width: 400px;    
     height: 400px;
-    width: 400px;
-
   }
 }
 .content{
-  padding-top: 30px;
-  max-width: 50%;
-  text-align: center;
   justify-content: left;
-  font-size: 40px;
+  text-align: center;
+  padding-top: 5%;
+  width: 50%;
+  font-family: "Inconsolata";
+  font-size: 1.3em;
 }
