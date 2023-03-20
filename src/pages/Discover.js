@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import passion from "../assets/images/la-passion.jpg";
 import dali from "../assets/images/Dali.jpg";
+import FormSignUp from "../components/FormSignUp";
 
 const Discover = () => {
   return (
@@ -24,14 +25,15 @@ const Discover = () => {
         Art is to be seen, but also discussed. That is why you will find a
         chatroom where everyone is free to express their thoughts.{" "}
       </p>
-      <img className="dali" src={dali} alt="image peinture Van Gogh" />
       <h1 className="why">Why Subscribe ?</h1>
+      <img className="dali" src={dali} alt="image peinture Van Gogh" />
       <p className="sub">
         - You will be able to store your favorite works so that you can find
         them more easily <br /> <br />
         - Have a nickname is convenient to use a chat <br />
         <br />- This site is a study project and we need some statistical data.
       </p>
+      <FormSignUp/>
     </div>
   );
 };

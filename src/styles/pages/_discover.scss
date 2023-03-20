@@ -6,8 +6,8 @@
     margin:0;
     background-color: #AB6EA5;
     // background-size: cover;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 1900px;
 }
 
 .what{
@@ -28,8 +28,8 @@
     padding-left: 80px;
 
     clear: left;
-
-    width: 50%;
+    float: left;
+    width: 45%;
     text-transform: uppercase;
     color: black;
 }
@@ -52,23 +52,101 @@
     padding-left: 80px;
     clear: left;
     float: left;
-    width: 50%;
+    width: 45%;
     color: black;
 
 }
 
 .la-passion{
-    padding: 190px 0 50px 80px;
+    padding: 150px 0 50px 80px;
     float: left;
     width: 45%;
 }
 
 .dali{
-    padding-top: 75px;
+    padding-top: 50px;
     padding-bottom: 25px;
     padding-right: 80px;
     clear: right;
     float: right;
-    width: 40%;
+    width: 50%;
 }
 
+
+
+
+@media screen and (max-width: 1300px) {
+    .what{
+        font-size: 3.5rem;
+    }
+    .descri{
+        font-size: 1.1rem;
+    }
+    .why{
+        font-size: 3.5rem;
+    }
+    .sub{
+        font-size: 1.1rem;
+    }
+    .dali{
+        padding-top: 0;
+    }
+}
+
+
+@media screen and (max-width: 1150px) {
+    .discover{
+        height: 2300px;
+    }    
+    .la-passion{
+        padding-top: 0;
+        padding-left: 120px;
+        padding-bottom: 0;
+        clear: right;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .what{
+        font-size: 4rem;
+        padding-top: 100px;
+        width: 100%;
+        clear: left;
+        display: flex;
+        justify-content: center;
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+    .descri{
+        width: 100%;
+        padding-right: 80px;
+        padding-left: 80px;
+        clear: right;
+        display: flex;
+        justify-content: center;
+    }
+    .why{
+        font-size: 4rem;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .dali{
+        width: 80%;
+        float: left;
+        padding-left: 120px;
+        padding-top: 0;
+    }
+    .sub{
+        width: 100%;
+        font-size: 1.1rem;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .discover{
+        overflow-x: hidden;
+        height: 2200px;
+    }
+}
