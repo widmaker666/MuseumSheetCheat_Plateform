@@ -1,27 +1,31 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+
 
 const Rgpd = () => {
   return (
     <>
-      <Navbar />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div className="web_ui__Container__container web_ui__Container__styling-wide">
-        <span className="web_ui__Text__text web_ui__Text__body web_ui__Text__left">
+      <div className="RGPDALL">
+        <br />
+        <Navbar />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <span className="texto">
           <h1 className="c-text--responsive-small-heading c-text--left c-text">
             Museum sheet cheat Politique de confidentialité
           </h1>
           <div className="c-spacer--small c-spacer">&nbsp;</div>
-          <div className="c-text--subtitle c-text--left c-text">
+          <div className="c-text--subtitle c-text--left c-textmaj">
             Date de la dernière mise à jour : 14/03/2023
           </div>
           <p>&nbsp;</p>
@@ -136,7 +140,7 @@ const Rgpd = () => {
             de confidentialité. La présente Politique de confidentialité et
             toute partie de celle-ci ne sont pas considérées comme des clauses
             contractuelles et ne constituent pas les{" "}
-            <a href="https://www.museum69chicago.fr/terms_and_conditions">
+            <a href="#">
               conditions générales
             </a>{" "}
             (« CG ») en tant que contrat conclu avec les utilisateurs
@@ -1828,7 +1832,7 @@ const Rgpd = () => {
               <p>
                 Pour nos enquêtes, nous utilisons le prestataire de services
                 Widgix Limited (Royaume-Uni,{" "}
-                <a href="https://euru/LexUriServ/LexUriServ.do?uri=OJ:L:2011:027:0039:0042:EN:PDF">
+                <a href="#">
                   considéré par la Commission européenne comme sûr en termes de
                   protection des données
                 </a>
@@ -1966,7 +1970,7 @@ const Rgpd = () => {
                 en dehors de l’Espace économique européen. Dans ce cas, les
                 données à caractère personnel sont protégées par le prestataire
                 de services qui s’engage à respecter les{" "}
-                <a href="https://e.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE pour transférer les données, telles qu’approuvées par la
@@ -2068,7 +2072,7 @@ const Rgpd = () => {
                 d'activer cette fonctionnalité, nous prenons le mot de passe,
                 nous le hachons et utilisons ensuite les 5 premiers caractères
                 du hachage sur « Have I Been Pwned » (
-                <a href="https://haenpwned.com/">https://habeenpwned.com/</a>)
+                <a href="#">https://habeenpwned.com/</a>)
                 pour effectuer une recherche dans la base de données de mots de
                 passe compromis.
               </p>
@@ -2215,7 +2219,7 @@ const Rgpd = () => {
                 données en dehors de l’Espace économique européen, celles-ci
                 sont protégées par le prestataire de services qui s’engage à
                 respecter les{" "}
-                <a href="https://eupa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE pour transférer les données conformément à ce qui a été
@@ -2378,7 +2382,7 @@ const Rgpd = () => {
                 l’Espace économique européen, toute donnée à caractère personnel
                 traitée par ce prestataire de services est protégée par
                 l’adhésion de celui-ci aux{" "}
-                <a href="https:/ex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE relatives au transfert des données, telles qu’approuvées
@@ -3504,7 +3508,7 @@ const Rgpd = () => {
                   suivi AfterShip Limited (Hong Kong, Chine). Les données à
                   caractère personnel sont protégées par le prestataire de
                   services qui s’engage à respecter les{" "}
-                  <a href="https://eur-pa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                  <a href="#">
                     clauses contractuelles types
                   </a>{" "}
                   de l’UE pour transférer les données telles qu’approuvées par
@@ -3555,7 +3559,7 @@ const Rgpd = () => {
                 Limited (Hong Kong, Chine). Les données à caractère personnel
                 sont protégées par le prestataire de services qui s’engage à
                 respecter les{" "}
-                <a href="https://eur-lel-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE pour transférer les données telles qu’approuvées par la
@@ -3632,7 +3636,7 @@ const Rgpd = () => {
                 est établi en dehors de l’Espace économique européen. Dans ce
                 cas, les données à caractère personnel sont protégées par le
                 prestataire de services qui s’engage à respecter les{" "}
-                <a href="https://eur-lex.europa.etent/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE pour transférer les données, telles qu’approuvées par la
@@ -3675,7 +3679,7 @@ const Rgpd = () => {
                 européen. Dans ce cas, les données à caractère personnel sont
                 protégées par le prestataire de services qui s’engage à
                 respecter les{" "}
-                <a href="https://eur-lex.europa.nt/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE pour transférer les données, telles qu’approuvées par la
@@ -3845,7 +3849,7 @@ const Rgpd = () => {
                 dehors de l’Espace économique européen. Dans ces cas précis, les
                 données à caractère personnel sont protégées par les exploitants
                 qui s’engagent à respecter les{" "}
-                <a href="https://eur-lpa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE pour transférer les données, telles qu’approuvées par la
@@ -3975,7 +3979,7 @@ const Rgpd = () => {
                 établi en dehors de l’Espace économique européen. Dans ce cas,
                 les données à caractère personnel sont protégées par le
                 prestataire de services qui s’engage à respecter les{" "}
-                <a href="https://eur-lpa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE pour transférer les données, telles qu’approuvées par la
@@ -3996,7 +4000,7 @@ const Rgpd = () => {
                   Meta Platforms, Inc. (États-Unis). Les données à caractère
                   personnel sont protégées par le prestataire de services qui
                   s’engage à respecter les{" "}
-                  <a href="https://eur-lex.eugal-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                  <a href="#">
                     clauses contractuelles types
                   </a>{" "}
                   de l’UE pour transférer les données telles qu’approuvées par
@@ -4006,7 +4010,7 @@ const Rgpd = () => {
                   Google LLC (États-Unis). Les données à caractère personnel
                   sont protégées par le prestataire de services qui s’engage à
                   respecter les{" "}
-                  <a href="https://eur-lex.europa.eu/letent/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                  <a href="#">
                     clauses contractuelles types
                   </a>{" "}
                   de l’UE pour transférer les données telles qu’approuvées par
@@ -4068,7 +4072,7 @@ const Rgpd = () => {
                 dehors de l’Espace économique européen. Dans ces cas précis, les
                 données à caractère personnel sont protégées par les exploitants
                 qui s’engagent à respecter les{" "}
-                <a href="https://eur-lex.euegal-content/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+                <a href="#">
                   clauses contractuelles types
                 </a>{" "}
                 de l’UE pour transférer les données, telles qu’approuvées par la
@@ -4116,7 +4120,7 @@ const Rgpd = () => {
                 aucune donnée à caractère personnel de la part de Facebook, mais
                 uniquement une évaluation et une illustration anonymes. Facebook
                 fournit de plus amples informations à ce sujet sur sa{" "}
-                <a href="https://facebo/help/pages/insights">
+                <a href="#">
                   page d'aide dédiée aux « Statistiques de Pages »
                 </a>
                 .{" "}
@@ -4214,7 +4218,7 @@ const Rgpd = () => {
               <p>
                 Facebook fournit de plus amples informations relatives à
                 l’exercice de ces droits sur la page{" "}
-                <a href="https://www.fak.com/legal/terms/information_about_page_insights_data">
+                <a href="#">
                   « Informations concernant les données de Statistiques de Pages
                   »
                 </a>
@@ -4248,14 +4252,14 @@ const Rgpd = () => {
                   LinkedIn est chargé de vous permettre d’exercer vos droits
                   conformément au RGPD. Pour ce faire, vous pouvez contacter
                   LinkedIn en ligne via le lien suivant :{" "}
-                  <a href="https://www.licom/help/linkedin/ask/PPQ">
+                  <a href="#">
                     https://www.linkedin.com/help/linkedin/ask/PPQ
                   </a>{" "}
                   ou via les coordonnées figurant dans les directives relatives
                   à la protection des données. Vous pouvez contacter le délégué
                   à la protection des données de LinkedIn Irlande via le lien
                   suivant :{" "}
-                  <a href="https://www.linkom/help/linkedin/ask/TSO-DPO">
+                  <a href="#">
                     https://www.linkedin.com/help/linkedin/ask/TSO-DPO
                   </a>
                   . Vous pouvez également nous joindre via les coordonnées
@@ -4271,7 +4275,7 @@ const Rgpd = () => {
                   statistiques. Vous avez toujours le droit de déposer une
                   plainte auprès de la commission irlandaise de protection des
                   données (voir{" "}
-                  <a href="https://www.daection.ie">www.dataprotection.ie</a>)
+                  <a href="#">www.dataprotection.ie</a>)
                   ou de toute autre autorité de contrôle.
                 </li>
               </ul>
@@ -4467,7 +4471,7 @@ const Rgpd = () => {
               <p>
                 <span>
                   Pour plus d’informations, nous t’invitons à consulter notre{" "}
-                  <a href="https://www.vi.fr/help/1149-dac7-reporting">
+                  <a href="#">
                     Centre d’aide
                   </a>
                   .
@@ -4675,7 +4679,7 @@ const Rgpd = () => {
             </div>
           </details>
           <p>
-            <a id="para1102"></a>&nbsp;
+            <a id="para3"></a>&nbsp;
           </p>
           <h1 className="c-text--responsive-small-heading c-text--left c-text">
             3. Bénéficiaires des données à caractère personnel
@@ -4710,7 +4714,7 @@ const Rgpd = () => {
             européen. Dans ces cas précis, les données à caractère personnel
             sont protégées par les prestataires de services qui s’engagent à
             respecter les{" "}
-            <a href="https://eur-lex.europa.eontent/FR/TXT/PDF/?uri=CELEX:32021D0914&amp;from=en">
+            <a href="#">
               clauses contractuelles types
             </a>{" "}
             de l’UE pour transférer les données, telles qu’approuvées par la
@@ -4754,7 +4758,7 @@ const Rgpd = () => {
             transfert des obligations et des droits relatifs à la relation
             contractuelle entre vous et Museum Sheet cheat à ces tiers,
             conformément aux CG (disponible via le lien{" "}
-            <a href="https://www.vierms-and-conditions">
+            <a href="#">
               www.Museum Sheet cheat.fr/terms-and-conditions
             </a>
             ), en particulier dans le cas du transfert d’un secteur d’activité,
@@ -4874,7 +4878,7 @@ const Rgpd = () => {
           <p>
             Museum Sheet cheat utilise des cookies et des technologies
             similaires sur la Plateforme. Pour en savoir plus, consultez notre{" "}
-            <a href="https://www.vied.fr/cookie-policy">
+            <a href="#">
               Politique d’utilisation des cookies
             </a>
             .
@@ -5046,7 +5050,9 @@ const Rgpd = () => {
             de vos données dans le cadre de votre utilisation de la Plateforme,
             ou concernant vos droits, veuillez contacter notre responsable de la
             protection des données aux adresses suivantes :{" "}
-            <a href="mailto:dted.fr">dpoted.fr</a>.
+            <NavLink to="/contact">
+              <p>Contact</p>
+            </NavLink>
           </p>
           <p>Responsable de la protection des données Museum Sheet cheat :</p>
           <p>Museum Sheet cheat, UAB</p>
@@ -5055,9 +5061,10 @@ const Rgpd = () => {
           <p>République de Lituanie</p>
           <p>-</p>
         </span>
-      </div>
-      <div>
-        <Footer />
+
+        <div>
+          <Footer />
+        </div>
       </div>
     </>
   );
