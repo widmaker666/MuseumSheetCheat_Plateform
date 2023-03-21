@@ -71,12 +71,13 @@ const PaintCardRandom = () => {
         <img
           className="art-img m-5"
           src={
-            paintData.image_id == null || paintData.image_id == ""
+            paintData.image_id == null || paintData.image_id == undefined  
               ? { alien }
               : `https://www.artic.edu/iiif/2/${paintData.image_id}/full/843,/0/default.jpg`
           }
           alt=""
         />
+        
         <div className="infos-card m-5">
           <h2
             style={{ fontStyle: "italic", fontSize: "35px", fontWeight: 900 }}

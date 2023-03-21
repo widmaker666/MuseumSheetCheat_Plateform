@@ -1,12 +1,11 @@
 // .home{
 //     background-color: rgb(212, 161, 98);
 // }
-
 .home {
   position: absolute;
   padding: 0;
   margin: 0;
-  background: url("../../assets/images/marbre.jpg") no-repeat fixed;
+  background: url("../../assets/images/marbre.jpg") center/cover no-repeat fixed;
   width: 100%;
 }
 

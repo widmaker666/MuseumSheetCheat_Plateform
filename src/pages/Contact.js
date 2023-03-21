@@ -15,8 +15,8 @@ const Contact = () => {
         <br />
         <br />
         <FormEmail />
-        <Footer />      
       </div>      
+                
     </>
   );
 };
