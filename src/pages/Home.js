@@ -109,8 +109,7 @@ function Home() {
         <br />
         <div className="mainContainer mb-5">
           <PaintCard />
-        </div>
-        <Footer />
+        </div>        
       </div>
     </>
   );

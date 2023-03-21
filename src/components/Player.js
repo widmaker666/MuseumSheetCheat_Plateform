@@ -3,7 +3,7 @@ import useSound from 'use-sound'
 import mySound from '../assets/music/sound.mp3' // Your sound file path here
 
 const Player = () => {   
-        const [playSound] = useSound(mySound, { volume: 0.1 }) // 70% of the original volume
+        const [playSound] = useSound(mySound, { volume: 0.06 }) // 70% of the original volume
         
         const handleClick = () => {
           playSound()
