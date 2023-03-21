@@ -66,7 +66,7 @@ function Home() {
           >
             Welcome on the Museum Sheet Cheat site
           </h3>
-          <div className="btn-lt">
+          <div className="btn text-center">
           <button onClick={clickLogin}>
             {currentUser ? (
               <button className="btn" onClick={logOut}>
