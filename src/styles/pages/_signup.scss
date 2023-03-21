@@ -121,3 +121,54 @@
     display: flex;
     flex-direction: column;
   }
+
+.signup-comp{
+
+    display: flex;
+    justify-content: center;
+    // position: relative;
+}
+
+.form_container_comp {
+    
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 800px;
+    position: absolute;
+    top: 1600px;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 1150px) {
+    .form_container_comp{
+        top: 78%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .form_container_comp{
+        margin-left: 100%;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .img_form{
+        display: none;
+    }
+    .formulaire{
+        border-radius: 25px;
+    }
+    .form_container_comp{
+        top: 78%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .form_container_comp{
+        top: 80%;
+    }
+}

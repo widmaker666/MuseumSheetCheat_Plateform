@@ -4,14 +4,17 @@ import Navigation from "../components/Navigation";
 import matisse from "../assets/images/matisse.jpg";
 import fenetre from "../assets/images/fenetre.jpg";
 import ambush from "../assets/images/ambush1.jpg";
+import DynamicText from "../components/DynamicText";
 
 const Welcome = () => {
   return (
     <div className="welcome">
       <Navigation />
       <h1 className="h1_welcome">
-        Do you know <br /> Museum sheet cheat ?
+        Do you know <br />
+        <DynamicText />
       </h1>
+
       <div className="buttons-welcome">
         <div className="to_discover">
           <h3 className="click-discover">Click here to discover</h3>

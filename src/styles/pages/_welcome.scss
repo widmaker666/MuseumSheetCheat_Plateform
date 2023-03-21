@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 .welcome{
-    position:absolute;
+    position: absolute;
     padding:0;
     margin:0;
     background-color: #387575;
     // background-size: cover;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
 }
 
 .h1_welcome{
@@ -26,8 +30,8 @@
     display: flex;
     justify-content: end;
     // float: right;
-    width: 400px;
-    height: 85%;
+    width: 25%;
+    // height: 85%;
     margin: 90px 180px auto auto
 }
 
@@ -126,9 +130,9 @@ h3{
         display: flex;
         justify-content: end;
         // float: right;
-        width: 400px;
-        height: 85%;
-        margin: 90px 50px auto auto
+        width: 28%;
+        // height: 85%;
+        margin: 150px 150px auto auto
     }
 }
 

@@ -2,91 +2,165 @@
 // .single { overflow-y: visible }
 // .single { overflow-y:auto }
 
-.single{
-    position:absolute;
-    padding:0;
-    margin:0;    
-    background: center/ cover no-repeat  url(../../assets/images/mur.png);
-    width: 100%;
-    height: 100%;
-    overflow-y: hidden;
-    // background-position: right top;
-    // background-attachment: scroll;
+.single {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background: center/ cover no-repeat url(../../assets/images/mur.png);
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  // background-position: right top;
+  // background-attachment: scroll;
 }
 
 .modal {
-    display: block;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000000;
-  }
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+}
 
-.close{
-    // right: 0;
-    // float: right;
-    width: 15px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-  }
+.close {
+  // right: 0;
+  // float: right;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
 
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
 .close-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
+.art-img {
+  max-width: 22%;
+  max-height: auto;
+  float: left;
+  border: 10px solid black;
+}
 
-.art-img{
-    max-width: 22%;
+.infos-card {
+  float: right;
+  max-width: 60%;
+  max-height: auto;
+  color: black;
+}
+
+.infos-card h2 {
+  // margin-top: 50px;
+  font-size: 30px;
+  font-family: "Italiana", serif;
+  font-weight: 800;
+}
+.infos-card h4 {
+    font-family: "Italiana", serif;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.infos-card p {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.desc {
+  margin-left: 20px;
+  margin-right: 80px;
+}
+
+@media screen and (max-width: 1068px) {
+  .art-img {
+    max-width: 20%;
     max-height: auto;
-    float: left;    
-    border: 10px solid black;
-}
-
-.infos-card{
-    float: right;
-    max-width: 55%;
-    max-height: auto;      
+    float: left;
+    border: 5px solid black;
+  }
+  .infos-card {
+    margin-bottom: 50px;
+    width: 50vh;
+    height: auto;
+    
     color: black;
-}
-
-.infos-card h2{
+  }
+  .infos-card h2 {
     // margin-top: 50px;
-    font-size: 2.5rem;
-    font-family: 'Italiana', serif;
+    font-size: 20px;
+    font-family: "Italiana", serif;
     font-weight: 800;
-}
-.infos-card h4{
-    font-family: 'Italiana', serif;
+  }
+  .infos-card h4 {
+    font-size: 10px;
+    font-family: "Italiana", serif;
     font-weight: 800;
-}
-
-.infos-card p{
-    font-size: 1rem;
+  }
+  
+  .infos-card p {
+    font-size: 12px;
     font-weight: 800;
-}
-
-.desc{
+  }
+  
+  .desc {    
     margin-left: 20px;
-    margin-right: 80px;
+    margin-right: 50px;
 }
+
+}
+
+@media screen and (max-width: 821px) {
+    .art-img {
+      max-width: 20%;
+      max-height: auto;
+      float: left;
+      border: 5px solid black;
+    }
+    .infos-card {
+      margin-bottom: 50px;
+      width: 25vh;
+      height: auto;
+      
+      color: black;
+    }
+    .infos-card h2 {
+      // margin-top: 50px;
+      font-size: 20px;
+      font-family: "Italiana", serif;
+      font-weight: 800;
+    }
+    .infos-card h4 {
+      font-size: 10px;
+      font-family: "Italiana", serif;
+      font-weight: 800;
+    }
+    
+    .infos-card p {
+      font-size: 12px;
+      font-weight: 800;
+    }
+    
+    .desc {    
+      margin-left: 20px;
+      margin-right: 50px;
+  }
+  
+  }

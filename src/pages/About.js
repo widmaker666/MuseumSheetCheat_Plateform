@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -7,12 +6,9 @@ const About = () => {
   return (
     <>
       <div className="about">
-        <br />
-        <Navbar />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div className="pb-5">
+          <Navbar />
+        </div>
         <div className="Btitle">About the Museum Sheet Cheat</div>
         <div className="type">
           <div className="title">Fact 1</div>

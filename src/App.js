@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "../src/context/AuthProvider";
+import Footer from "./components/Footer";
 
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -32,8 +33,8 @@ function App() {
             <Route path="/one-paint/:uid" element={<SinglePaint />} />
             <Route path="/privacy" element={<Rgpd />} />
             <Route path="*" element={<Error404 />} />
-          </Routes>
-        </BrowserRouter>
+          </Routes>          
+        </BrowserRouter>       
       </AuthProvider>
     </div>
   );

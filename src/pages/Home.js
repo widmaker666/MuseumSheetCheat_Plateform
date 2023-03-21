@@ -48,17 +48,23 @@ function Home() {
           <Navbar />          
         </div>
         
-        <div>        
+        <div className="pt-5">        
           <h3
-            className="mt-5 pt-5 text-center"
+            className="mt-5 pt-0 text-center "
             style={{
               fontFamily: "Italiana",
               fontSize: "3.5em",
               fontWeight: 1000,
               color: "black",
+              border: "3px solid goldenrod",
+              borderBottomWidth: 0,
+              marginLeft: "20%",
+              marginRight: "20%",
+              marginBottom: "5%",
+              paddingBottom: "2%",
             }}
           >
-            Bienvenue sur Museum Sheet Cheat
+            Welcome on the Museum Sheet Cheat site
           </h3>
           <div className="btn-lt">
           <button onClick={clickLogin}>
@@ -89,7 +95,7 @@ function Home() {
                 "Art is the shortest way from man to man",
                 "True art is not only the expression of a feeling, but also the result of a sharp intelligence",
                 "The work of art is not the reflection, the image of the world; but it is the image of the world",
-                "Enjoy your visit at the Museum Sheet Cheat website",
+                "Enjoy your visit on the Museum Sheet Cheat website",
               ]}
               multiTextDelay={2000}
               typeSpeed={100}
@@ -103,8 +109,7 @@ function Home() {
         <br />
         <div className="mainContainer mb-5">
           <PaintCard />
-        </div>
-        <Footer />
+        </div>        
       </div>
     </>
   );
