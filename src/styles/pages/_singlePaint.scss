@@ -54,9 +54,9 @@
 }
 
 .art-img {
-  max-width: 22%;
-  max-height: auto;
-  float: left;
+  width: 22%;
+  height: auto;
+  float: left;  
   border: 10px solid black;
 }
 
@@ -105,7 +105,7 @@
   }
   .infos-card h2 {
     // margin-top: 50px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Italiana", serif;
     font-weight: 800;
   }
@@ -129,21 +129,20 @@
 
 @media screen and (max-width: 821px) {
     .art-img {
-      max-width: 20%;
+      max-width: 100%;
       max-height: auto;
       float: left;
       border: 5px solid black;
     }
     .infos-card {
       margin-bottom: 50px;
-      width: 25vh;
-      height: auto;
-      
+      width: 40vh;
+      height: auto;      
       color: black;
     }
     .infos-card h2 {
       // margin-top: 50px;
-      font-size: 20px;
+      font-size: 25px;
       font-family: "Italiana", serif;
       font-weight: 800;
     }
@@ -163,4 +162,6 @@
       margin-right: 50px;
   }
   
-  }
+}
+
+  

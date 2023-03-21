@@ -164,6 +164,34 @@
     top: 80%;
   }
 }
+@media screen and (max-width: 1175px) {
+  .valid {
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 25%;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    // transform: translate(-50%, 0);
+    border: solid #000000 1px;
+  }
+}
+
+@media screen and (max-width: 902px) {
+  .valid {
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 25%;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    right: 70%;
+    // transform: translate(-50%, 0);
+    border: solid #000000 1px;
+  }
+}
+
 
 @media screen and (min-width: 1680px) {
   .form_container_comp {

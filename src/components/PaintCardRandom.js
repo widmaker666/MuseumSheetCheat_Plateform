@@ -80,7 +80,7 @@ const PaintCardRandom = () => {
         
         <div className="infos-card m-5">
           <h2
-            style={{ fontStyle: "italic", fontSize: "35px", fontWeight: 900 }}
+            style={{ fontStyle: "italic", fontWeight: 900 }}
           >
             {paintData.title == null || paintData.title == "" ? (
               <p>No Title</p>
@@ -88,7 +88,7 @@ const PaintCardRandom = () => {
               paintData.title
             )}
           </h2>
-          <h4 style={{ fontSize: "25px" }}>
+          <h4>
             {paintData.artist_title == null || paintData.artist_title == "" ? (
               <p>Unsigned</p>
             ) : (
@@ -108,14 +108,14 @@ const PaintCardRandom = () => {
             style={{
               fontStyle: "italic",
               textDecoration: "underline red",
-              fontSize: "30px",
+              
             }}
           >
             Description
           </h2>
           <p
             className="desc mb-0 p-1"
-            style={{ fontStyle: "italic", fontSize: "20px" }}
+            style={{ fontStyle: "italic"}}
           >
             {descriptionData.value == null || descriptionData.value == "" ? (
               <p>NO description</p>
@@ -143,12 +143,12 @@ const PaintCardRandom = () => {
                             style={{
                               fontStyle: "italic",
                               textDecoration: "underline red",
-                              fontSize: "40px",
+                              
                             }}
                           >
                             Description
                           </h2>
-                          <p style={{ fontStyle: "italic", fontSize: "20px" }}>
+                          <p style={{ fontStyle: "italic" }}>
                             {descriptionData.value}
                           </p>
                         </div>
@@ -163,12 +163,12 @@ const PaintCardRandom = () => {
           </p>
 
           <br />
-          <p
+          <h2
             className="mb-0 p-1"
             style={{
               fontStyle: "italic",
               textDecoration: "underline red",
-              fontSize: "30px",
+              
             }}
           >
             {medium.label == null || medium.label == "" ? (
@@ -176,7 +176,7 @@ const PaintCardRandom = () => {
             ) : (
               medium.label
             )}
-          </p>
+          </h2>
           <p>
             {medium.value == null || medium.value == "" ? (
               <p>No infos</p>
@@ -185,11 +185,11 @@ const PaintCardRandom = () => {
             )}
           </p>
           <br />
-          <p
+          <h2
             style={{
               fontStyle: "italic",
               textDecoration: "underline red",
-              fontSize: "30px",
+              
             }}
           >
             {dimensions.label == null || dimensions.label == "" ? (
@@ -197,7 +197,7 @@ const PaintCardRandom = () => {
             ) : (
               dimensions.label
             )}
-          </p>
+          </h2>
           <p>
             {dimensions.value == null || dimensions.value == "" ? (
               <p>No infos</p>
