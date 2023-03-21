@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.png";
 const Footer = () => {
   return (
     <>
-      <footer className="footer d-flex flex-wrap justify-content-between align-items-center py-3  ">
+      <footer className="footer d-flex flex-wrap justify-content-between align-items-center py-3">
         <a
           href="/home"
           className="col-md-4 d-flex align-items-center justify-content-center mb-md-3 me-md-auto link-dark text-decoration-none"
