@@ -136,7 +136,7 @@
     align-items: end;
     width: 800px;
     position: absolute;
-    top: 1300px;
+    top: 1600px;
     // left: 50%;
     // transform: translate(-50%, -50%);
     border-radius: 25px;
@@ -144,7 +144,7 @@
 
 @media screen and (max-width: 1150px) {
     .form_container_comp{
-        top: 70%;
+        top: 78%;
     }
 }
 
@@ -163,6 +163,12 @@
         border-radius: 25px;
     }
     .form_container_comp{
-        top: 65%;
+        top: 78%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .form_container_comp{
+        top: 80%;
     }
 }
