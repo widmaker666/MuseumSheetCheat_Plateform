@@ -23,7 +23,7 @@ const Login = () => {
           navigate("/login");
           alert("Password or Login Failed");
           console.log(error);
-        });      
+        });
     }
     onRegister();
   };

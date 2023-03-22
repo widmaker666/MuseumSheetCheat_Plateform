@@ -98,8 +98,7 @@ function Home() {
                 "Enjoy your visit on the Museum Sheet Cheat website",
               ]}
               multiTextDelay={2000}
-              typeSpeed={100}
-              loop={true}
+              typeSpeed={100}             
             />
           </div>
         </div>
