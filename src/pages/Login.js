@@ -15,12 +15,15 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     function onRegister() {
-      signInWithEmailAndPassword(auth, email, password).catch((error) => {
+      signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        navigate("/home");
+      })
+      .catch((error) => {
         navigate("/login");
         alert("Password or Login Failed");
         console.log(error);
-      });
-      navigate("/home");
+      });     
     }
     onRegister();
   };
