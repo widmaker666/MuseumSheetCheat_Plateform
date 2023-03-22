@@ -17,10 +17,10 @@ const SignUp = () => {
   const [isPasswordFocused, setIsPasswordFocused] = useState(false);
   const navigate = useNavigate();
 
-  //!Const Validations
+  //!Const Validations mdp
   const passwordHasLowercaseLetter = /[a-z]/.test(password);
   const passwordHasUppercaseLetter = /[A-Z]/.test(password);
-  const passwordHasSpecialCharacter = /^(?=.*[!@#\$%\^&\*])/.test(password);
+  const passwordHasSpecialCharacter = /^(?=.*[!@#\$%\^&\*\?\:\;\,])/.test(password);
   const passwordHasNumber = /[0-9]/.test(password);
   const passwordHasValidLength = password.length >= 8;
 
@@ -43,7 +43,7 @@ const SignUp = () => {
       !/[a-z]/.test(password) ||
       !/[A-Z]/.test(password) ||
       !/[0-9]/.test(password) ||
-      !/[^a-zA-Z0-9]/.test(password)
+      !/^(?=.*[!@#\$%\^&\*\?\:\;\,])/.test(password)
     ) {
       return alert("password need to be more secured");
     } else if (password !== repeatPassword) {
@@ -62,6 +62,7 @@ const SignUp = () => {
           });
         })
         .catch((error) => console.log(error));
+
       navigate("/home");
     }
     onRegister();
