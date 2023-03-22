@@ -19,19 +19,19 @@ Nous sommes fiers de vous offrir une expérience interactive riche et informée 
 
 #A quoi va ressembler le site
 
-Le site utilisera l'API du Musée de chicago ainsi que Firebase, EmailJs, FramerMotion
+Le site utilisera l'API du Musée de chicago ainsi que Firebase, EmailJs
 
 
 ## Les différente pages présentes
 
 -Une page About
-Pour parler de nous
+Pour parler du musée
 
 -Une page Contact
-Envoyer un message pour un besoin, une attente ou un remerciement
+Envoyer un message pour un besoin, une attente ou un remerciement ou pour la suppression ou désactivation d'un compte
 
 -Une page Discover
-page de présentation du site et de l'Api
+page de présentation du site
 
 -Une page profil
 si connecté vous affiche toutes les données liées à votre inscription
@@ -46,6 +46,8 @@ Qui permettra de mettre ce que le site propose.
 
 - Une page Home (Pourra y accéder lorsqu'on est connecté)
 Il y aura différents filtres pour afficher des peintures
+
+- Une page RGPD pour la confidentialité des données
 
 
 
@@ -77,6 +79,5 @@ qui permet la selection d'une oeuvre au hasard
 
 
 
-
-
 ##Pour le style css / sass sera fait à la main
+
