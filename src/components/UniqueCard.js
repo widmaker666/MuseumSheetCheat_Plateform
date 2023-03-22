@@ -14,6 +14,8 @@ const UniqueCard = () => {
   const [loading, setLoading] = useState(true);
   const params = useParams();
   const [showModal, setShowModal] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+
 
   //!Constants API
 
@@ -28,6 +30,11 @@ const UniqueCard = () => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+  const handleClick = () => {
+    setShowPopup(true);
+  };
+  
 
   //!Functions
   useEffect(() => {
