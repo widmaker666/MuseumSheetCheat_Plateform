@@ -5,7 +5,7 @@ import alien from "../assets/images/alien.png";
 
 const PaintCardRandom = () => {
   //!Constants
-  //*Réécrire toute les variables à la main ! car bug d'affichage
+  
   const [paintData, setPaintData] = useState([]);
   const [descriptionData, setDescriptionData] = useState({});
   const [medium, setMedium] = useState({});

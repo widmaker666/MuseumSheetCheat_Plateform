@@ -12,8 +12,8 @@ const UniqueCard = () => {
   const [dimensions, setDimensions] = useState({});
   const [attribution, setAttribution] = useState("");
   const [loading, setLoading] = useState(true);
-  const params = useParams();
   const [showModal, setShowModal] = useState(false);
+  const params = useParams();
 
   //!Constants API
 
@@ -73,7 +73,7 @@ const UniqueCard = () => {
           className="art-img m-5"
           src={
             paintData.image_id == null || paintData.image_id == "" ? (
-              {alien}
+              alien
             ) : (
               `https://www.artic.edu/iiif/2/${paintData.image_id}/full/843,/0/default.jpg`
             )

@@ -16,14 +16,14 @@ const Login = () => {
     e.preventDefault();
     function onRegister() {
       signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        navigate("/home");
-      })
-      .catch((error) => {
-        navigate("/login");
-        alert("Password or Login Failed");
-        console.log(error);
-      });     
+        .then(() => {
+          navigate("/home");
+        })
+        .catch((error) => {
+          navigate("/login");
+          alert("Password or Login Failed");
+          console.log(error);
+        });      
     }
     onRegister();
   };

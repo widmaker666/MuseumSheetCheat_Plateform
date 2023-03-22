@@ -6,7 +6,7 @@ import Loader from "./Loader";
 const PaintCard = () => {
   //!Constants
   const [paintData, setPaintData] = useState([]);
-  const [rangeValue, setRangeValue] = useState(12);
+  const [rangeValue, setRangeValue] = useState(4);
   const [loading, setLoading] = useState(true);
 
   //!Constants API

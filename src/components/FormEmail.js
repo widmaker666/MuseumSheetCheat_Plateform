@@ -102,7 +102,7 @@ const FormEmail = () => {
                   fontSize: "1.5em",
                   text: "center",
                 }}
-                startDelay={50}
+                startDelay={100}
                 loop={true}
                 cursorColor="black"
                 text="Here is the contact form you can use for all your requests,
