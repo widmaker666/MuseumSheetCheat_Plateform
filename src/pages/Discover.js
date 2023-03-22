@@ -48,9 +48,9 @@ const Discover = () => {
         more. In addition, by registering, you will also be able to enjoy other
         exclusive benefits, such as discounts on admission tickets. Register now
         to become part of our community and enjoy these unique benefits! We
-        would like to stress that we will not use our users' data for any
+        would like to stress that we will not use our users data for any
         purpose other than sending targeted invitations to our events. We will
-        not spam our users and will respect their privacy.
+        not spam our users and will respect their privacy and we can also deactivate your account if you don't want to receive any more information emails.
       </p>
     </div>
   );
