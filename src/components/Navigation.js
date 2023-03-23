@@ -39,6 +39,9 @@ const Navigation = () => {
           <li>
             <Player />
           </li>
+          <NavLink to="/home">
+            <li>Home</li>
+          </NavLink>
           <NavLink to="/login">
             <li>Login</li>
           </NavLink>
