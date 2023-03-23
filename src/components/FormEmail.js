@@ -102,11 +102,10 @@ const FormEmail = () => {
                   fontSize: "1.5em",
                   text: "center",
                 }}
-                startDelay={100}
-                loop={true}
+                startDelay={100}                
                 cursorColor="black"
                 text="Here is the contact form you can use for all your requests,
-                for all your requests, appreciations and comments.
+                appreciations and comments.
                 Moreover, if you want to delete, deactivate or change the password of your account, we will also ask you to use the contact form.
 Good day to all."
                 typeSpeed={50}
